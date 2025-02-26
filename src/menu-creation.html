@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Restaurant menu creation and management">
+    <title>Menu Creation | Restaurant Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="menu-creation.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <div class="dashboard">
+        <nav class="sidebar" role="navigation" aria-label="Main navigation">
+            <!-- Same navigation as index.html but with menu-creation.html active -->
+            <div class="nav-item user" tabindex="0" role="button" aria-label="User profile" onclick="location.href='profile.html'">
+                <div class="icon" aria-hidden="true">👤</div>
+                <span>Alice</span>
+            </div>
+            <div class="nav-item" tabindex="0" role="button" aria-label="Analytics page" onclick="location.href='index.html'">
+                <div class="icon" aria-hidden="true">📊</div>
+                <span>Analytics</span>
+            </div>
+            <div class="nav-item active" tabindex="0" role="button" aria-label="Menu page" aria-current="page" onclick="location.href='menu-creation.html'">
+                <div class="icon" aria-hidden="true">📋</div>
+                <span>Menu</span>
+            </div>
+            <!-- Other nav items -->
+        </nav>
+
+        <main id="main-content" class="content">
+            <header class="menu-header">
+                <h1>Menu Management</h1>
+                <a href="order.html" class="order-link">View Customer Ordering Page</a>
+            </header>
+            
+            <div class="menu-toolbar">
+                <div class="toolbar-actions">
+                    <button id="new-folder" class="btn-action" aria-label="Create new folder">
+                        <span class="icon" aria-hidden="true">📁</span> New Folder
+                    </button>
+                    <button id="new-item" class="btn-action" aria-label="Create new menu item">
+                        <span class="icon" aria-hidden="true">🍽️</span> New Item
+                    </button>
+                    <button id="remove-item" class="btn-action" aria-label="Delete selected item">
+                        <span class="icon" aria-hidden="true">🗑️</span> Delete
+                    </button>
+                </div>
+                
+                <div class="path-navigator">
+                    <span class="path-root" data-path="">Root</span>
+                    <div id="breadcrumb-path" class="breadcrumb"></div>
+                </div>
+            </div>
+            
+            <div class="menu-container">
+                <div class="folder-explorer">
+                    <ul class="folder-tree" role="tree" aria-label="Menu categories">
+                        <li class="folder-item" role="treeitem" aria-expanded="true" data-path="">
+                            <div class="folder-name">
+                                <span class="icon" aria-hidden="true">📂</span>
+                                <span>Root</span>
+                            </div>
+                            <ul role="group">
+                                <li class="folder-item" role="treeitem" aria-expanded="false" data-path="breakfast">
+                                    <div class="folder-name">
+                                        <span class="icon" aria-hidden="true">📁</span>
+                                        <span>Breakfast</span>
+                                    </div>
+                                </li>
+                                <li class="folder-item" role="treeitem" aria-expanded="false" data-path="lunch">
+                                    <div class="folder-name">
+                                        <span class="icon" aria-hidden="true">📁</span>
+                                        <span>Lunch</span>
+                                    </div>
+                                    <ul role="group">
+                                        <li class="folder-item" role="treeitem" aria-expanded="false" data-path="lunch/sandwich">
+                                            <div class="folder-name">
+                                                <span class="icon" aria-hidden="true">📁</span>
+                                                <span>Sandwich</span>
+                                            </div>
+                                        </li>
+                                        <li class="folder-item" role="treeitem" aria-expanded="false" data-path="lunch/salad">
+                                            <div class="folder-name">
+                                                <span class="icon" aria-hidden="true">📁</span>
+                                                <span>Salad</span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="folder-item" role="treeitem" aria-expanded="false" data-path="dinner">
+                                    <div class="folder-name">
+                                        <span class="icon" aria-hidden="true">📁</span>
+                                        <span>Dinner</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="file-explorer">
+                    <div class="explorer-header">
+                        <span class="col name">Name</span>
+                        <span class="col type">Type</span>
+                        <span class="col price">Price</span>
+                        <span class="col modified">Last Modified</span>
+                    </div>
+                    
+                    <div class="explorer-body" id="explorer-items">
+                        <!-- Content will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Modal for creating new folder -->
+            <div id="folder-modal" class="modal" role="dialog" aria-labelledby="folder-modal-title" aria-hidden="true">
+                <div class="modal-content">
+                    <button class="close-modal" aria-label="Close modal">&times;</button>
+                    <h2 id="folder-modal-title">Create New Folder</h2>
+                    <form id="folder-form">
+                        <div class="form-group">
+                            <label for="folder-name">Folder Name</label>
+                            <input type="text" id="folder-name" required>
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit" class="btn-primary">Create</button>
+                            <button type="button" class="btn-secondary modal-cancel">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- Modal for creating/editing menu item -->
+            <div id="item-modal" class="modal" role="dialog" aria-labelledby="item-modal-title" aria-hidden="true">
+                <div class="modal-content">
+                    <button class="close-modal" aria-label="Close modal">&times;</button>
+                    <h2 id="item-modal-title">Create New Menu Item</h2>
+                    <form id="item-form">
+                        <div class="form-group">
+                            <label for="item-name">Item Name</label>
+                            <input type="text" id="item-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="item-price">Price ($)</label>
+                            <input type="number" id="item-price" min="0" step="0.01" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="item-description">Description</label>
+                            <textarea id="item-description" rows="3"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="item-image">Image</label>
+                            <input type="file" id="item-image" accept="image/*">
+                            <div id="image-preview" class="image-preview"></div>
+                        </div>
+                        <div class="form-group">
+                            <label>Options</label>
+                            <div id="options-container">
+                                <!-- Options will be added here -->
+                            </div>
+                            <button type="button" id="add-option" class="btn-secondary">
+                                <span class="icon" aria-hidden="true">➕</span> Add Option
+                            </button>
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit" class="btn-primary">Save</button>
+                            <button type="button" class="btn-secondary modal-cancel">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="wave" aria-hidden="true"></div>
+        </main>
+    </div>
+    
+    <script src="menu-creation.js"></script>
+</body>
+</html>

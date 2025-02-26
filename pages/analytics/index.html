@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Analytics Dashboard for restaurant performance tracking">
+    <title>Analytics | Restaurant Dashboard</title>
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel="stylesheet" href="../../assets/css/components/sidebar.css">
+    <link rel="stylesheet" href="../../assets/css/pages/analytics.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <div class="dashboard">
+        <nav class="sidebar" role="navigation" aria-label="Main navigation">
+            <a href="../profile/index.html" class="nav-item" aria-label="User profile">
+                <div class="icon" aria-hidden="true">👤</div>
+                <span>Alice</span>
+            </a>
+            <a href="../analytics/index.html" class="nav-item" aria-label="Analytics page">
+                <div class="icon" aria-hidden="true">📊</div>
+                <span>Analytics</span>
+            </a>
+            <a href="../menu/index.html" class="nav-item" aria-label="Menu page">
+                <div class="icon" aria-hidden="true">📋</div>
+                <span>Menu</span>
+            </a>
+            <a href="../orders/index.html" class="nav-item" aria-label="Orders page">
+                <div class="icon" aria-hidden="true">🔔</div>
+                <span>Orders</span>
+            </a>
+            <a href="#" class="nav-item logout" aria-label="Log out of the application">
+                <div class="icon" aria-hidden="true">↪️</div>
+                <span>Log out</span>
+            </a>
+        </nav>
+
+        <main id="main-content" class="content">
+            <header>
+                <h1>Analytics</h1>
+            </header>
+            
+            <div class="charts">
+                <div class="chart-card">
+                    <h2>Popular Menus</h2>
+                    <canvas id="pieChart"></canvas>
+                </div>
+                
+                <div class="chart-card">
+                    <h2>Profit</h2>
+                    <canvas id="lineChart"></canvas>
+                </div>
+                
+                <div class="chart-card">
+                    <h2>Foot traffic</h2>
+                    <canvas id="barChart"></canvas>
+                </div>
+            </div>
+            
+            <div class="wave" aria-hidden="true"></div>
+        </main>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../../assets/js/common.js"></script>
+    <script src="../../assets/js/pages/analytics.js"></script>
+</body>
+</html>
