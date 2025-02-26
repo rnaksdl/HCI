@@ -1,11 +1,38 @@
 .mainBody {
-    margin: 0;
+    margin-left: 80px; /* Match sidebar width */
+    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    width: 95%; /* Full width minus sidebar */
     font-family: 'Poiret One', cursive;
-}
+  }
+  
+  /* Responsive adjustment for mainBody */
+  @media (max-width: 768px) {
+    .mainBody {
+      margin-left: 0;
+      margin-top: 60px; /* Space for the top bar on mobile */
+      width: 100%;
+    }
+    
+    .restaurantNameBox,
+    .groupBox,
+    .addNewGroup {
+      width: 90%; /* Make boxes responsive */
+      max-width: 600px;
+    }
+    
+    .textEntry {
+      width: 60%;
+      margin: 10px;
+    }
+    
+    .submitButton {
+      width: 25%;
+    }
+  }
 
 .restaurantNameBox {
     width: 800px;
@@ -77,3 +104,22 @@
     cursor: pointer;
     background-color: #333333;
 }
+
+:root {
+    --primary-bg: #000;
+    --primary-text: #fff;
+    --secondary-bg: #333;
+    --accent-color: #007bff;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    min-height: 100vh;
+    font-family: 'Poiret One', cursive;
+  }
+  
+  html {
+    height: 100%;
+  }
