@@ -1,0 +1,59 @@
+body {
+    font-family: 'Poiret One', sans-serif;
+    background-color: white;
+    color: white;
+    text-align: left;
+}
+
+.container {
+    width: 350px;
+    margin: auto;
+    margin-top: 100px;
+    background: white;
+    color: black;
+    padding: 40px;
+    border-radius: 10px;
+    border: 1px solid black
+}
+
+h2 {
+    font-size: 28px;
+    text-align: center;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+
+.rememberForgot {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    align-items: center;
+}
+
+.hidden {
+    display: none;
+}
+
+.addressFields {
+    display: flex;
+    justify-content: space-between;
+    gap: 10%;
+}
