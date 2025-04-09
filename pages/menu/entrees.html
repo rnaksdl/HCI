@@ -2,13 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Restaurant menu creation and management">
-    <title>Menu Management | Restaurant Dashboard</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+    <title>Entrees</title>
     <link rel="stylesheet" href="../../assets/css/main.css">
     <link rel="stylesheet" href="../../assets/css/components/sidebar.css">
-    <link rel="stylesheet" href="../../assets/css/pages/menu.css">
+    <link rel="stylesheet" href="../../assets/css/pages/entrees.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <nav class="sidebar" role="navigation" aria-label="Main navigation">
@@ -35,21 +36,37 @@
     </nav>
 
     <section class="mainBody">
-        <div class="restaurantNameBox">
-            Restaurant Name's Menu
-        </div>
-        <div onclick="window.location.href='entrees.html'" class="groupBox">
+        <div class="entryName">
             Entrees
         </div>
-        <div class="groupBox">
-            Sides
+
+        <div class="entry">
+            <div class="entryImage">
+                burger image
+            </div>
+            <div class="description">
+                <div class="mainName">
+                    <b>The Killer Burger Meal</b>
+                </div>
+                <div class="price">
+                    $22.99
+                </div>
+            </div>
+            <div class="descAndMods">
+                <div class="description">
+                    This killer burger comes with cheese, lettuce, mayo, and tomatoes and is grilled to perfection!
+                </div>
+                <div class="mods">
+                    + Modfications
+                </div>
+            </div>
         </div>
-        <div class="addNewGroup">
-            <input type="text" placeholder="New Folder Name" class="textEntry">
-            <button type="submit" class="submitButton">SUBMIT</button>
+
+        <div class="addEntry">
+            + Add Item to Entrees
         </div>
+
     </section>
-    <script src="../../assets/js/common.js"></script>
-    <script src="../../assets/js/pages/menu.js"></script>
+
 </body>
 </html>
