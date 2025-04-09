@@ -1,0 +1,125 @@
+.mainBody {
+
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 95%; /* Full width minus sidebar */
+    font-family: 'Poiret One', cursive;
+  }
+  
+  /* Responsive adjustment for mainBody */
+  @media (max-width: 768px) {
+    .mainBody {
+      margin-left: 0;
+      margin-top: 60px; /* Space for the top bar on mobile */
+      width: 100%;
+    }
+    
+    .restaurantNameBox,
+    .groupBox,
+    .addNewGroup {
+      width: 90%; /* Make boxes responsive */
+      max-width: 600px;
+    }
+    
+    .textEntry {
+      width: 60%;
+      margin: 10px;
+    }
+    
+    .submitButton {
+      width: 25%;
+    }
+  }
+
+.restaurantNameBox {
+    width: 800px;
+    padding: 20px;
+    margin: 30px;
+    border: 2px solid black;
+    border-radius: 10px;
+    text-align: center;
+    background-color: black;
+    color: white;
+    font-size: 70px;
+}
+.groupBox {
+    width: 600px;
+    padding: 20px;
+    margin: 30px;
+    border: 2px solid black;
+    border-radius: 10px;
+    text-align: center;
+    background-color: black;
+    color: white;
+    font-size: 60px;
+}
+
+.groupBox:hover {
+    cursor: pointer;
+    background-color: #333333;
+}
+
+.addNewGroup {
+    width: 900px;
+    height: 100px;
+    margin: 30px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+}
+
+.textEntry {
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 10px;
+    align-items: center;
+    width: 800px;
+    height: 100px;
+    margin: 30px;
+    border: 2px solid black;
+    border-radius: 10px;
+    text-align: left;
+    background-color: #323232;
+    color: white;
+    font-size: 40px;
+}
+
+.submitButton {
+    padding: 5px;
+    width: 300px;
+    height: 75px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    font-size: 40px;
+
+}
+
+.submitButton:hover {
+    cursor: pointer;
+    background-color: #333333;
+}
+
+:root {
+    --primary-bg: #000;
+    --primary-text: #fff;
+    --secondary-bg: #333;
+    --accent-color: #007bff;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    min-height: 100vh;
+    font-family: 'Poiret One', cursive;
+  }
+  
+  html {
+    height: 100%;
+  }
