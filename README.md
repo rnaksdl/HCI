@@ -1,5 +1,6 @@
 # HCI
 
+Deployed at https://rnaksdl.github.io/HCI/
 
 Libraries used:
 Charts.js

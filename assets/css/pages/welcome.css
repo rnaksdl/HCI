@@ -1,0 +1,115 @@
+/* General Styles */
+body 
+{
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    overflow-y: auto; /* Allows scrolling */
+    background: white;
+}
+
+/* Top Header Text (Home, Features, About Us) */
+.header 
+{
+    text-align: center;
+    font-family: 'Poiret One', sans-serif;
+    font-size: 20px;
+    padding: 20px;
+}
+
+.header a 
+{
+    margin: 0 20px;
+    text-decoration: none;
+    color: black;
+}
+
+/* Login Button - Positioned to Top Right */
+.loginButton 
+{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: black;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer;
+    font-family: 'Poiret One', sans-serif;
+    border-radius: 10px;
+}
+
+/* Main Section */
+.hero 
+{
+    padding: 100px 0;
+    font-family: 'Poiret One', sans-serif;
+}
+
+/* Get Started Button */
+.getStarted 
+{
+    background: white;
+    color: black;
+    font-family: 'Poiret One', sans-serif;
+    padding: 10px 20px;
+    border: 2px solid black;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 10px;
+
+}
+
+/* Black Section (Extends All the Way Down) */
+.blackSection 
+{
+    background: black;
+    color: white;
+    padding: 50px 10%;
+    min-height: 100vh; /* Ensures it fills the screen */
+}
+
+/* Features Section - Left Aligned */
+.features 
+{
+    text-align: left;
+    font-family: 'Poiret One', sans-serif;
+}
+
+/* About Us Section - Centered */
+.about 
+{
+    text-align: center;
+    font-family: 'Poiret One', sans-serif;
+}
+
+/* Responsive Fix */
+@media (max-width: 600px) 
+{
+    .header 
+    {
+        font-size: 16px;
+    }
+    .loginButton 
+    {
+        top: 10px;
+        right: 10px;
+    }
+}
+
+.title 
+{
+    font-size: 10vw; /* Scales based on screen width */
+}
+
+.subtitle 
+{
+    font-size: 3vw; /* Adjust as needed */
+}
+
+.logo
+{
+    width: 75px;
+}
+
