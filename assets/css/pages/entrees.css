@@ -1,0 +1,75 @@
+.mainBody {
+    /* margin-left: 80px; Match sidebar width */
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 95%; /* Full width minus sidebar */
+    font-family: 'Poiret One', cursive;
+  }
+
+.entryName {
+    width: 800px;
+    padding: 20px;
+    margin: 30px;
+    border: 2px solid black;
+    border-radius: 10px;
+    text-align: center;
+    background-color: black;
+    color: white;
+    font-size: 70px;
+}
+
+.entry {
+    width: 800px;
+    padding: 20px;
+    margin: 10px;
+    border: 2px solid black;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row; 
+}
+
+.entryImage {
+    border: 2px solid black;
+    margin: 0;
+}
+
+.addEntry {
+    width: 400px;
+    padding: 20px;
+    margin: 30px;
+    border: 2px solid black;
+    border-radius: 10px;
+    text-align: center;
+    background-color: black;
+    color: white;
+    font-size: 35px;
+}
+
+.addEntry:hover {
+    cursor: pointer;
+    background-color: #333333;
+}
+
+:root {
+    --primary-bg: #000;
+    --primary-text: #fff;
+    --secondary-bg: #333;
+    --accent-color: #007bff;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    min-height: 100vh;
+    font-family: 'Poiret One', cursive;
+  }
+  
+  html {
+    height: 100%;
+  }
