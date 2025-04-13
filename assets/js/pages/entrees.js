@@ -40,25 +40,37 @@ modalOverlay.addEventListener('click', (e) => {
     }
 });
 
-// Submit new entry when the user presses the submit button
+// Submits new entry when the user presses the submit button
 submitBtn.addEventListener('click', () => {
-    // Validate the required fields
-    if (itemName.value.trim() === '' || itemPrice.value.trim() === '') {
-        alert('Please fill out all required fields.');
+
+    // Making sure a name was entered
+    if (itemName.value.trim() === '') 
+    {
+        alert('Please enter the name of the entree');
+        return;
+    }
+
+    // Making sure a price was entered
+    if(itemPrice.value.trim() === '') 
+    {
+        alert('Please enter the price for the entree')
         return;
     }
     
-    // Determine image source:
-    // Use a URL.createObjectURL if an image file is selected; otherwise use a default image.
+    // Determining image source
+    // Using URL.createObjectURL if image is entered and using a default image if not
     let imageSrc = '';
-    if (itemImage.files && itemImage.files[0]) {
+    if (itemImage.files && itemImage.files[0]) 
+    {
         imageSrc = URL.createObjectURL(itemImage.files[0]);
-    } else {
+    } 
+    else 
+    {
         // Update this path to a default image if desired
-        imageSrc = '../../assets/img/killerBurger.png';
+        imageSrc = '../../assets/img/defaultImage.png';
     }
     
-    // Create a new entry element that replicates the structure of your existing entries.
+    // Creating new entry element
     const entryDiv = document.createElement('div');
     entryDiv.classList.add('entry');
     
@@ -84,11 +96,10 @@ submitBtn.addEventListener('click', () => {
         </div>
     `;
     
-    // Insert the new entry element before the "addEntry" div so that it appears
-    // after any existing entries.
+    //Inserting new entry before "addEntry" so it appears after existing entries
     addEntryDiv.parentElement.insertBefore(entryDiv, addEntryDiv);
     
-    // Clear all modal fields and close the modal window
+    // Clearing all fields and closing the modal window
     clearModalFields();
     modalOverlay.classList.add('hidden');
 });
