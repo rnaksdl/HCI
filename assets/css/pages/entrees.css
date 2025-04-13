@@ -138,14 +138,167 @@
 
 /* Modal box styles */
 .modalBox {
+  position: relative;
   background-color: white;
   padding: 30px;
   border-radius: 12px;
-  width: 400px;
+  width: 700px;
+  height: 550px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
   text-align: center;
 }
 
+.titleAndBack {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.modalTitle {
+  width: 350px;
+  padding: 10px;
+  margin: 10px;
+  border: 2px solid black;
+  border-radius: 10px;
+  text-align: center;
+  background-color: black;
+  color: white;
+  font-size: 40px;
+}
+
+.closeModal {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+}
+
+.closeModalBtn {
+  background-color: white;
+  border: none;
+  width: 40px;
+  font-size: 35px;
+}
+
+.closeModalBtn:hover {
+  cursor: pointer;
+  background-color: whitesmoke;
+}
+
+.mainForm {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.formLeft {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 250px;
+  width: 300px;
+}
+
+.itemName {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 10px;
+}
+
+.itemName label {
+  font-size: 25px;
+}
+
+.itemName input {
+  width: 225px;
+  height: 40px;
+  background-color: white;
+  border: 1px solid #919191;
+  border-radius: 10px;
+  font-size: 18px;
+  padding: 5px;
+}
+
+.formRight {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 250px;
+  width: 300px;
+  margin-top: 16px;
+}
+
+.itemImage {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 10px;
+}
+
+.itemImage label {
+  font-size: 25px;
+}
+
+.modalSubmitBtn {
+  width: 250px;
+  padding: 10px;
+  margin: 20px;
+  border: 2px solid black;
+  border-radius: 10px;
+  text-align: center;
+  background-color: black;
+  color: white;
+  font-size: 35px;
+}
+
+.modalSubmitBtn:hover {
+  cursor: pointer;
+  background-color: #333333;
+}
+
+.itemPrice {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 10px;
+}
+
+.itemPrice label {
+  font-size: 25px;
+}
+
+.itemPrice input {
+  width: 225px;
+  height: 40px;
+  background-color: white;
+  border: 1px solid #919191;
+  border-radius: 10px;
+  font-size: 18px;
+  padding: 5px;
+}
+
+.itemDescription {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 10px;
+}
+
+.itemDescription label {
+  font-size: 25px;
+}
+
+.itemDescription textarea {
+  width: 275px;
+  height: 100px;
+  background-color: white;
+  border: 1px solid #919191;
+  border-radius: 10px;
+  font-size: 12px;
+  padding: 5px;
+}
 
 :root {
     --primary-bg: #000;
