@@ -1,0 +1,57 @@
+.entryPlusAdd {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.addToCart {
+    margin-bottom: 20px;
+}
+
+.addBtn {
+    background-color: #4CAF50;
+    font-size: 30px;
+    color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 70px;
+}
+
+.addBtn:hover {
+    cursor: pointer;
+    background-color: #45a049;
+}
+
+.removeBtn {
+    background-color: #f44336;
+    font-size: 30px;
+    color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 120px;
+}
+
+.removeBtn:hover {
+    cursor: pointer;
+    background-color: #d32f2f;
+}
+
+.totalAndCheckout {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.totalAndCheckout p {
+    font-size: 30px;
+    font-weight: bolder;
+    text-decoration: underline;
+}
+
+#checkoutBtn {
+    font-size: 30px;
+    margin: 20px;
+}
