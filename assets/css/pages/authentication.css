@@ -190,7 +190,7 @@ button:hover
     display: block;
 }
   
-.form-summary-error 
+.formSummaryError 
 {
     color: red;
     font-weight: bold;
@@ -202,5 +202,3 @@ input.inputError
     border: 1px solid red !important;
     background-color: #fff0f0;
 }
-  
-

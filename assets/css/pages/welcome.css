@@ -151,3 +151,46 @@ body
     mask-size: cover;
     -webkit-mask-size: cover;
 }
+
+/* Styling for features */
+.featureOption,
+.featureOptionReverse 
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 64px;
+  margin: 30px auto;
+  flex-wrap: wrap;
+}
+
+.featureOption h3,
+.featureOption p 
+{
+  max-width: 500px;
+  text-align: center;
+}
+
+.featureOptionReverse h3,
+.featureOptionReverse p 
+{
+  max-width: 500px;
+  text-align: center;
+}
+
+/* Image styling */
+.featureOption img,
+.featureOptionReverse img 
+{
+  width: 400px;
+  height: auto;
+  object-fit: contain;
+  align-items: center;
+}
+
+.featureText 
+{
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+  }
