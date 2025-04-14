@@ -1,0 +1,25 @@
+.entryPlusAdd {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.addToCart {
+    margin-bottom: 20px;
+}
+
+.addBtn {
+    background-color: #4CAF50;
+    font-size: 30px;
+    color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 70px;
+}
+
+.addBtn:hover {
+    cursor: pointer;
+    background-color: #45a049;
+}
