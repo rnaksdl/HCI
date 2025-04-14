@@ -1,3 +1,9 @@
+/* Scroll animation when clicking header */
+html {
+    scroll-behavior: smooth;
+}
+
+
 /* General Styles */
 body 
 {
@@ -113,3 +119,17 @@ body
     width: 75px;
 }
 
+/* Black wave styling for welcome page to merge into black section */
+.blackWave {
+    position: relative;
+    width: 100%;
+    height: 120px;
+    background: black;
+    z-index: 1;
+    margin-bottom: -5px; /* Smooth out overlap */
+
+    mask: url("data:image/svg+xml,%3Csvg viewBox='0 0 1200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 120C300 180 900 60 1200 120L1200 200L0 200Z' fill='white'/%3E%3C/svg%3E") no-repeat bottom;
+    -webkit-mask: url("data:image/svg+xml,%3Csvg viewBox='0 0 1200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 120C300 180 900 60 1200 120L1200 200L0 200Z' fill='white'/%3E%3C/svg%3E") no-repeat bottom;
+    mask-size: cover;
+    -webkit-mask-size: cover;
+}
