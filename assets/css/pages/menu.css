@@ -146,13 +146,27 @@
     height: 100%;
   }
 
+
+.checkoutSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.checkoutInstruction {
+  font-size: 22px;
+  font-weight: bold;
+}
+
 /* True Payment */
 .paymentCard {
   border: 2px solid black;
   border-radius: 12px;
   padding: 24px;
-  width: 100%;
-  max-width: 400px;
+  /* width: 100%;
+  max-width: 600px; */
+  width: 500px;
   text-align: left;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
   cursor: pointer;
@@ -169,7 +183,7 @@
 }
 
 .paymentHeader {
-  font-size: 20px;
+  font-size: 30px;
   font-weight: bold;
   margin-bottom: 10px;
   padding-left: 30px;

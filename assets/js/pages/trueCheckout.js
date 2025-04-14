@@ -29,9 +29,16 @@ function sendReceipt() {
         // Redirect to the customer dashboard (menuDashboard.html) after 2 seconds
         setTimeout(function() {
             window.location.href = "menuDashboard.html"; // Redirect to the customer dashboard
-        }, 2000); // 2-second delay to allow user to see the receipt message
+        }, 1000); // 1-second delay to allow user to see the receipt message
     } else {
         // Display a message if the email is empty
         alert('Please enter a valid email address.');
     }
 }
+
+function redirectToConfirmation() {
+    setTimeout(() => {
+      window.location.href = "menuDashboard.html"; // Update path if needed
+    }, 1000); 
+  }
+  
