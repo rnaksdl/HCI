@@ -45,6 +45,11 @@ button
     border-radius: 10px;
 }
 
+button:hover
+{
+    background-color: rgb(62, 62, 62);
+}
+
 
 .rememberForgot 
 {
@@ -175,4 +180,27 @@ button
 {
     color: gray;
 }
+
+/* Error styling */
+.errorMessage 
+{
+    color: red;
+    font-size: 13px;
+    margin-top: 4px;
+    display: block;
+}
+  
+.form-summary-error 
+{
+    color: red;
+    font-weight: bold;
+    margin: 12px 0;
+}
+  
+input.inputError
+{
+    border: 1px solid red !important;
+    background-color: #fff0f0;
+}
+  
 

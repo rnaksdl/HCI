@@ -4,64 +4,82 @@
     <meta charset = "UTF-8">
     <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
     <title>Authentication Page</title>
-    <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel = "stylesheet" href = "../../assets/css/main.css">
     <link rel = "stylesheet" href = "../../assets/css/pages/authentication.css">
     <link href = "https://fonts.googleapis.com/css2?family=Poiret+One&family=Open+Sans&display=swap" rel = "stylesheet">
 </head>
 <body>
-    <div class = "container">
-       
 
-        <!-- Login Form -->
-        <div class = "formBox" id="loginForm">
+    <div class = "container">
+
+
+        <!-- Login Form --> 
+        <div class = "formBox" id = "loginForm">
 
             <a href = "../../index.html" class = "formBackLink"> ← Back</a>
 
             <div class = "formContent">
                 <h2>Login</h2>
-                <form>
-                    <label>Email Address</label>
-                        <input type = "email" required>
-                
-                    <label>Password</label>
-                    <input type = "password" required>
 
+                <form id = "loginFormElement" onsubmit = "return validateLoginForm()" novalidate>
+                    <label for = "loginEmail">Email Address</label>
+                    <input type = "email" id = "loginEmail" />
+                    <span class = "errorMessage" id = "loginEmailError"></span>
+              
+                    <label for = "loginPassword">Password</label>
+                    <input type = "password" id = "loginPassword" />
+                    <span class = "errorMessage" id = "loginPasswordError"></span>
+              
                     <div class = "rememberForgot">
-                        <label class = "rememberMe"> <input type = "checkbox"> Remember me</label>
-                        <a href = "#" class = "forgotPassword">Forgot Password?</a>
+                    <label class = "rememberMe">
+                        <input type = "checkbox" id = "rememberMe" /> Remember me
+                    </label>
+                    <a href = "#" class = "forgotPassword">Forgot Password?</a>
                     </div>
-
-                   <button type = "submit">LOGIN</button>
-                    
-                   <div class = "createAccountLink">
-                        <p>Don't have an account? <a href="#" onclick = "toggleForms()">Create one here</a></p>
+              
+                    <div class = "form-summary-error" id="loginSummaryError"></div>
+              
+                    <button type = "submit">LOGIN</button>
+              
+                    <div class = "createAccountLink">
+                    <p>Don't have an account? <a href = "#" onclick = "toggleForms()">Create one here</a></p>
                     </div>
-
                 </form>
             </div>
         </div>
 
-        <!-- Sign Up-->
-        <div class = "formBox hidden" id = "signupForm">
 
-            <a href = "../../index.html" class = "formBackLink"> ← Back </a>
+        <!-- Sign Up --> 
+        <div class = "formBox hidden" id = "signupForm">
+            <a href = "../../index.html" class = "formBackLink">← Back</a>
 
             <div class = "formContent">
                 <h2>Sign Up</h2>
-                <form>
-                    <label>First Name</label>
-                    <input type = "text" required>
-        
-                     <label>Last Name</label>
-                    <input type = "text" required>
-        
-                    <label>Email Address</label>
-                    <input type = "email" required>
-        
-                    <label>Password</label>
-                    <input type = "password" required>
-        
-                    <div class = "passwordRequirements"> <!-- Do we want a dynamic check? Could be implemented later -->
+
+                <form id = "signupFormElement" onsubmit = "return validateSignupForm()" novalidate>
+
+                    <!-- First Name -->
+                    <label for = "firstName">First Name</label>
+                    <input type = "text" id = "firstName" />
+                    <span class = "errorMessage" id = "firstNameError"></span>
+
+                    <!-- Last Name -->
+                    <label for = "lastName">Last Name</label>
+                    <input type = "text" id = "lastName" />
+                    <span class = "errorMessage" id = "lastNameError"></span>
+
+                    <!-- Email -->
+                    <label for = "signupEmail">Email Address</label>
+                    <input type = "email" id = "signupEmail" />
+                    <span class = "errorMessage" id = "signupEmailError"></span>
+
+                    <!-- Password -->
+                    <label for = "signupPassword">Password</label>
+                    <input type = "password" id = "signupPassword" />
+                    <span class = "errorMessage" id = "signupPasswordError"></span>
+
+                    <!-- Password Requirements -->
+                    <div class = "passwordRequirements">
                         <ul>
                             <li>Must be at least 8 characters long</li>
                             <li>Should include at least one uppercase letter</li>
@@ -69,60 +87,74 @@
                             <li>Should include at least one special character</li>
                         </ul>
                     </div>
-        
-                    <label>Business Name</label>
-                    <input type = "text" required>
-        
-                    <label>Business Address</label>
-                    <input type = "text" placeholder = "Street Address" required> <!-- The placeholders are temporary until I move them underneath input boxes -->
-                    <input type = "text" placeholder = "Street Address Line 2">
-        
+
+                    <!-- Business Name -->
+                    <label for = "businessName">Business Name (Optional)</label>
+                    <input type = "text" id = "businessName" />
+                    <span class = "errorMessage" id = "businessNameError"></span>
+
+                    <!-- Business Address -->
+                    <label for = "businessAddress1">Business Address (Optional)</label>
+                    <input type = "text" id = "businessAddress1" placeholder = "Street Address" />
+                    <span class = "errorMessage" id = "businessAddress1Error"></span>
+
+                    <input type = "text" id = "businessAddress2" placeholder = "Street Address Line 2" />
+
                     <div class = "addressFields">
                         <div class = "bAContainer">
-                            <label>City</label>
-                            <input type = "text" required>
+                            <label for = "city">City</label>
+                            <input type = "text" id = "city" />
+                            <span class = "errorMessage" id = "cityError"></span>
                         </div>
                         <div class = "fieldContainer">
-                            <label>State/Province</label>
-                            <input type = "text" required>
+                            <label for = "state">State/Province</label>
+                            <input type = "text" id = "state" />
+                            <span class = "errorMessage" id = "stateError"></span>
                         </div>
                     </div>
-        
+
                     <div class = "addressFields">
                         <div class = "bAContainer">
-                            <label>Zip Code/Postal</label>
-                            <input type = "text" required>
+                            <label for = "zip">Zip Code/Postal</label>
+                            <input type = "text" id = "zip" />
+                            <span class = "errorMessage" id = "zipError"></span>
                         </div>
                         <div class = "bAContainer">
-                            <label>Country</label>
-                            <input type = "text" required>
+                            <label for = "country">Country</label>
+                            <input type = "text" id = "country" />
+                            <span class = "errorMessage" id = "countryError"></span>
                         </div>
                     </div>
-        
-                    <label>Phone Number (Optional)</label>
-                    <input type = "tel">
-        
-                    <label>EIN/TIN (Optional)</label>
-                    <input type = "text">
-        
-                    <p>Providing an EIN/TIN is optional. This is for your own record-keeping and is not required to use our POS system.</p>
-        
-                    <button type = "submit">CREATE ACCOUNT</button>
-        
-                    <div class = "loginAccountLink">
-                        <p>Already have an account? <a href = "#" onclick = "toggleForms()">Go to login here</a></p>
-                    </div>
-                    
 
+                    <!-- Phone Number -->
+                    <label for = "phoneNumber">Phone Number (Optional)</label>
+                    <input type = "tel" id = "phoneNumber" />
+                    <span class = "errorMessage" id = "phoneNumberError"></span>
+
+                    <!-- EIN/TIN -->
+                    <label for = "ein">EIN/TIN (Optional)</label>
+                    <input type = "text" id = "ein" />
+
+                    <p>Providing an EIN/TIN is optional. This is for your own record-keeping and is not required to use our POS system.</p>
+
+                    <div class = "form-summary-error" id = "signupErrorSummary"></div>
+
+                    <!-- Submit Button -->
+                    <button type = "submit">CREATE ACCOUNT</button>
+
+                    <!-- Switch to Login -->
+                    <div class = "loginAccountLink">
+                        <p>Already have an account? <a href = "#" onclick="toggleForms()">Go to login here</a></p>
+                    </div>
                 </form>
             </div>
         </div>
     </div>
 
     <!-- Black wave -->
-    <div class="auth-wave" aria-hidden="true"></div>
+    <div class = "auth-wave" aria-hidden = "true"></div>
 
 
-    <script src = "authentication.js"></script>
+    <script src = "authentication.js" defer></script>
 </body>
 </html>
