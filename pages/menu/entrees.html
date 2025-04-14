@@ -35,6 +35,62 @@
         </a>
     </nav>
 
+    <div  onclick="window.location.href='index.html'" class="backArrow">
+        <img src="../../assets/img/backArrow.png" alt="Back">
+    </div>
+
+    <div class="modalOverlay hidden">
+        <div class="modalBox">
+            <div class="closeModal">
+                <button class="closeModalBtn">X</button>
+            </div>
+            <div class="modalAll">
+                <div class="titleAndBack">
+                    <div class="modalTitle">
+                        Add Item to entree
+                    </div>
+                </div>
+                <div class="mainForm">
+                    <div class="formLeft">
+                        <div class="itemName">
+                            <label for="itemName">Item Name:</label>
+                            <input type="text" id="itemName" name="itemName" placeholder="Enter entree name" maxlength="25">
+                        </div>
+
+                         <div class="itemImage">
+                            <label for="itemImage">Image (optional):</label>
+                            <input type="file" id="itemImage" name="itemImage" accept="image/*">
+                         </div>
+                         
+                         <div class="addMods">
+                            <label for="modBox">Add modifications:</label>
+                            <div class="modAndBtn">
+                                <input type="text" id="modBox" name="modBox" placeholder="Add mod">
+                                <button class="modAddBtn">ADD</button>
+                            </div>
+                         </div>
+                    </div>
+                    <div class="formRight">
+                        <div class="itemPrice">
+                            <label for="itemPrice">Price ($):</label>
+                            <input type="number" id="itemPrice" name="itemPrice" placeholder="Entree price" maxlength="7">
+                        </div>
+
+                        <div class="itemDescription">
+                            <label for="itemDescription">Description:</label>
+                            <textarea id="itemDescription" name="itemDescription" placeholder="Item description (optional)." maxlength="150"></textarea>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="modalSubmit">
+                    <button class="modalSubmitBtn">SUBMIT</button>
+                </div>
+            </div>
+        </div>
+      </div>
+      
+
     <section class="mainBody">
         <div class="entryName">
             Entrees
@@ -42,9 +98,9 @@
 
         <div class="entry">
             <div class="entryImage">
-                burger image
+                <img src="../../assets/img/killerBurger.png" alt="Burger">
             </div>
-            <div class="description">
+            <div class="nameAndPrice">
                 <div class="mainName">
                     <b>The Killer Burger Meal</b>
                 </div>
@@ -54,10 +110,22 @@
             </div>
             <div class="descAndMods">
                 <div class="description">
-                    This killer burger comes with cheese, lettuce, mayo, and tomatoes and is grilled to perfection!
+                    This killer burger comes with cheese, lettuce, mayo, tomatoes and is grilled to perfection!
                 </div>
                 <div class="mods">
-                    + Modfications
+                    <div class="modTitle">
+                        Add Modifications:
+                    </div>
+                    <div class="actualMods">
+                        <input type="checkbox" name="pickles" id="pickles">
+                        <label for="pickles">pickles</label>
+
+                        <input type="checkbox" name="mustard" id="mustard">
+                        <label for="mustard">mustard</label>
+
+                        <input type="checkbox" name="onions" id="onions">
+                        <label for="onions">onions</label>
+                    </div>
                 </div>
             </div>
         </div>
@@ -68,5 +136,6 @@
 
     </section>
 
+<script src="../../assets/js/pages/entrees.js"></script>
 </body>
 </html>

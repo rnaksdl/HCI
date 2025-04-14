@@ -1,47 +1,105 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang = "en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset = "UTF-8">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
     <title>Welcome Page - KillerSale</title>
-    <link rel="stylesheet" href="assets/css/pages/welcome.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel = "stylesheet" href = "assets/css/pages/welcome.css">
+    <link href = "https://fonts.googleapis.com/css2?family=Poiret+One&family=Open+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <!-- Header -->
-    <div class="header">
-        <a href="#">Home</a> <!-- Just added this because its Home, we may remove this and just do something else. -->
-        <a href="#">Features</a>
-        <a href="#">About Us</a>
+    <div class = "header">
+        <a href = "#features">Features</a>
+        <a href = "#about">About Us</a>
     </div>
 
     <!-- Login Button -->
-    <button class="loginButton">Login</button>
+    <button class = "loginButton">Login</button>
 
     <!-- Hero Section -->
-    <section class="hero">
-        <img class="logo" src="assets/img/KillerWhale.png">
-        <h1 class="title">KILLERSALE</h1>
-        <p class="subtitle">Stay Orcanized</p>
-        <button class="getStarted" onclick="window.location.href='pages/analytics/index.html';">Get Started</button>
+
+    <section class = "hero">
+        <img class = "logo" src = "assets/img/KillerWhale.png">
+        <h1 class = "title">KILLERSALE</h1>
+        <p class = "subtitle">Stay Orcanized</p>
+        <button class = "getStarted" onclick = "window.location.href='/pages/analytics/index.html';">Get Started</button>
+
     </section>
 
+    <!-- Black wave -->
+    <div class = "blackWave" aria-hidden = "true"></div>
+
     <!-- Black Background Section -->
-    <section class="blackSection">
+    <section class = "blackSection">
         <!-- Features Section -->
-        <div class="features">
+        <div class = "features" id = "features">
             <h2>Features</h2>
-            <p>Random text about the features that this application will have.... BLAB</p>
+            
+            <div class = "featureOption">
+                <div class = "featureText">
+                    <h3> All-in-One POS </h3>
+                    <p> Manage a business and customer POS in one application tailored for small businesses.</p>
+                </div>
+                <img src = "assets/img/AllInOne.png" alt = "All-In-One">
+            </div>
+
+            <div class = "featureOptionReverse">
+                <img src = "assets/img/Analytics.png" alt = "Analytics">
+                <div class = "featureText">
+                    <h3> Real-Time Analytics </h3>
+                    <p> Gain insight into your sale trends, such as popular menu, profit, and foot traffic, with
+                        dynamic analytics right at your fingertips.
+                    </p>
+                </div>
+            </div>
+
+            <div class = "featureOption">
+                <div class = "featureText">
+                    <h3> Custom Menu Creation</h3>
+                    <p>
+                    Easily create, edit, and organize your resturant's menu. Add item names, prices, categories, 
+                    and descriptions in just a few clicks.
+                    </p>
+                </div>
+
+                <img src = "assets/img/MenuCreation.png" alt = "Custom Menu Creation">
+            </div>
+
+            <div class = "featureOptionReverse">
+                <img src = "assets/img/Orders.png" alt = "Orders">
+                <div class = "featureText">
+                    <h3> Order Tracking </h3>
+                    <p> View current orders in progress and past orders. Keep your workflow smooth and your customers happy
+                        with real-time updates.
+                    </p>
+                </div>
+            </div>
+
+
         </div>
 
         <!-- About Us Section -->
-        <div class="about">
+        <div class = "about" id = "about">
             <h2>About Us</h2>
-            <p>About the website, inspiration or about us. IDK but all websites have this so I added this</p>
-        </div>
+            <p> Welcome to KillerSale, the Point of Sale (POS) system built to help small 
+                businesses streamline their operations with one application. Our mission 
+                is simple: Stay Orcanized. We provide an easy-to-use solution that combines 
+                powerful customer and restaurant management functionalities, all in one place.</p>
+
+            <p> KillerSale is designed to give small businesses the tools they need to run efficiently 
+                and effectively without breaking the bank. With KillerSale, you get all the essential POS 
+                features, from secure payment processes to real-time analytics for absolutely no cost. 
+                We believe that small businesses shouldn't have to struggle to use preexisting POS nor pay
+                hundreds to thousands of dollars for a POS system, or even two, and that is why we created this platform
+                and why it is free to use.</p>
+
+            <p> <i> *KillerSale is currently still in development</i></p>
     </section>
 
-    <script src="assets/js/pages/welcome.js"></script>
+
+    <script src = "/assets/js/pages/welcome.js"></script>
+  
 </body>
 </html>

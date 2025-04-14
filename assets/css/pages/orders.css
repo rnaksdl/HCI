@@ -1,0 +1,118 @@
+.mainBody {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 95%;
+    font-family: 'Poiret One', cursive;
+}
+
+.ordersContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.orderBox {
+    background-color: #fdfdfd;
+    border-left: 6px solid #000000;
+    padding: 2rem 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Poiret One', cursive;
+}
+
+.orderBox h3 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+}
+
+.orderBox ul {
+    margin: 0.5rem 0;
+    padding-left: 0.5rem;
+}
+
+.orderBox li {
+    padding-left: 1.5rem;
+    margin-bottom: 0rem;
+}
+
+.orderItems {
+    padding-left: 1rem;
+    margin: 0;
+    list-style-type: disc;
+}
+
+.orderItems li {
+    margin-bottom:0.5rem;
+}
+
+.modifications {
+    margin-bottom: 0.5rem;
+    margin-left:1rem;
+    padding-left: 1.5rem;
+    font-size: 0.9rem;
+    list-style-type: circle;
+}
+
+.titleBox {
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 2rem;
+    margin-top: 1.5rem;
+}
+
+.status {
+    font-weight: bold;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+}
+
+.status.preparing {
+    color: #fff;
+    background-color: #f39c12;
+}
+
+.status.ready {
+    color: #fff;
+    background-color: #2ecc71;
+}
+
+.status.completed {
+    color: #fff;
+    background-color: #332ecc;
+}
+
+.orderNavigation {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.orderBtn {
+    padding: 10px 20px;
+    margin: 0 1rem;
+    background-color: #000c17;
+    border: 1px solid #ffffff;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.orderBtn.active {
+    background-color: #012040;
+    color: white;
+    border-color: #000000;
+}
+
+.orderBtn:hover {
+    background-color: #223549;
+}
+
+.ordersContainer {
+    margin-top: 1rem;
+}

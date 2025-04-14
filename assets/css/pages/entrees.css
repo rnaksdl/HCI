@@ -9,6 +9,24 @@
     font-family: 'Poiret One', cursive;
   }
 
+  .backArrow {
+    position: absolute;
+    top: 20px;
+    left: 100px;
+    z-index: 1000; /* Keep it above other elements */
+  }
+  
+  .backArrow img {
+    width: 60px;
+    height: auto;
+    cursor: pointer;
+  }
+
+  .backArrow img:hover {
+    background-color: whitesmoke;
+  }
+  
+
 .entryName {
     width: 800px;
     padding: 20px;
@@ -23,19 +41,126 @@
 
 .entry {
     width: 800px;
-    padding: 20px;
-    margin: 10px;
-    border: 2px solid black;
-    border-radius: 10px;
+    border: 3px solid black;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row; 
+    font-family: sans-serif;
+    margin-bottom: 30px;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .entryImage {
-    border: 2px solid black;
-    margin: 0;
+    border-right: 3px solid black;
+    padding: 20px;
+}
+
+.entryImage img {
+  height: 80px;
+  width: 80px;
+}
+
+.nameAndPrice {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  border-right: 3px solid black;
+  margin: 0;
+  padding: 10px;
+  width: 750px;
+  height: 127px;
+}
+
+.mainName {
+  text-decoration: underline;
+  font-weight: bolder;
+  font-size: 30px;
+  padding: 5px;
+}
+
+.price {
+  font-size: 25px;
+}
+
+.descAndMods {
+  font-size: 17px;
+}
+
+.description {
+  border-bottom: 3px solid black;
+  padding-left: 3px;
+  width: 315px;
+  height: 77px;
+}
+
+.mods {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 48px;
+}
+
+.modTitle {
+  justify-content: center;
+  align-items: center;
+}
+
+.actualMods {
+  flex-direction: row;
+  gap: 10px;
+  font-size: 15px;
+}
+
+.modList {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.modItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+}
+
+.modItem span {
+  font-size: 16px;
+  margin-right: 8px;
+}
+
+.modEditBtn {
+  font-size: 13px;
+  margin-right: 5px;
+  background-color: #4CAF50;
+  color: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 40px;
+}
+
+.modEditBtn:hover {
+  background-color: #45a049;
+  cursor: pointer;
+}
+
+.modDeleteBtn {
+  font-size: 13px;
+  margin-right: 5px;
+  background-color: #f44336;
+  color: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 45px;
+}
+
+.modDeleteBtn:hover {
+  background-color: #d32f2f;
+  cursor: pointer;
 }
 
 .addEntry {
@@ -53,6 +178,220 @@
 .addEntry:hover {
     cursor: pointer;
     background-color: #333333;
+}
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Grays out background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000; /* Higher than everything else */
+}
+
+/* Hidden by default */
+.hidden {
+  display: none;
+}
+
+
+/* Modal box styles */
+.modalBox {
+  position: relative;
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  width: 700px;
+  height: 550px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.titleAndBack {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.modalTitle {
+  width: 350px;
+  padding: 10px;
+  margin: 10px;
+  border: 2px solid black;
+  border-radius: 10px;
+  text-align: center;
+  background-color: black;
+  color: white;
+  font-size: 40px;
+}
+
+.closeModal {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+}
+
+.closeModalBtn {
+  background-color: white;
+  border: none;
+  width: 40px;
+  font-size: 35px;
+}
+
+.closeModalBtn:hover {
+  cursor: pointer;
+  background-color: whitesmoke;
+}
+
+.mainForm {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  font-family: sans-serif;
+}
+
+.formLeft {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 250px;
+  width: 300px;
+}
+
+.itemName {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 10px;
+}
+
+.itemName label {
+  font-size: 25px;
+}
+
+.itemName input {
+  width: 225px;
+  height: 40px;
+  background-color: white;
+  border: 1px solid #919191;
+  border-radius: 10px;
+  font-size: 18px;
+  padding: 5px;
+}
+
+.addMods {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 10px;
+}
+
+.addMods label {
+  font-size: 25px;
+}
+
+.modAndBtn input {
+  width: 200px;
+  height: 30px;
+  background-color: white;
+  border: 1px solid #919191;
+  border-radius: 10px;
+  font-size: 15px;
+  padding: 5px;
+}
+
+.modAndBtn button {
+  width: 50px;
+  height: 25px;
+}
+
+.modAndBtn button:hover {
+  background-color: lightgray;
+  cursor: pointer;
+}
+
+.formRight {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 250px;
+  width: 300px;
+}
+
+.itemImage {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 10px;
+}
+
+.itemImage label {
+  font-size: 25px;
+}
+
+.modalSubmitBtn {
+  width: 200px;
+  padding: 10px;
+  margin: 20px;
+  border: 2px solid black;
+  border-radius: 10px;
+  text-align: center;
+  background-color: black;
+  color: white;
+  font-size: 35px;
+}
+
+.modalSubmitBtn:hover {
+  cursor: pointer;
+  background-color: #333333;
+}
+
+.itemPrice {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 10px;
+}
+
+.itemPrice label {
+  font-size: 25px;
+}
+
+.itemPrice input {
+  width: 225px;
+  height: 40px;
+  background-color: white;
+  border: 1px solid #919191;
+  border-radius: 10px;
+  font-size: 18px;
+  padding: 5px;
+}
+
+.itemDescription {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 10px;
+}
+
+.itemDescription label {
+  font-size: 25px;
+}
+
+.itemDescription textarea {
+  width: 275px;
+  height: 100px;
+  background-color: white;
+  border: 1px solid #919191;
+  border-radius: 10px;
+  font-size: 12px;
+  padding: 5px;
 }
 
 :root {

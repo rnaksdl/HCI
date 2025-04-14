@@ -31,7 +31,7 @@
                 <div class="icon" aria-hidden="true">🔔</div>
                 <span>Orders</span>
             </a>
-            <a href="#" class="nav-item logout" aria-label="Log out of the application">
+            <a href="../authentication/authentication.html" class="nav-item logout" aria-label="Log out of the application">
                 <div class="icon" aria-hidden="true">↪️</div>
                 <span>Log out</span>
             </a>
@@ -47,14 +47,17 @@
                     <h2 id="profile-section">Restaurant Information</h2>
                     
                     <div class="profile-info">
-                        <div class="profile-avatar">
-                            <img src="../../assets/img/placeholder.jpg" alt="Restaurant logo" id="profile-image">
-                            <button class="btn-upload" id="upload-btn" aria-label="Upload new restaurant logo">
-                                <span class="icon" aria-hidden="true">📷</span>
-                                <span>Change Logo</span>
-                            </button>
-                            <input type="file" id="file-upload" accept="image/*" class="hidden" aria-hidden="true">
-                        </div>
+                    <div class="profile-avatar">
+                        <img src="../../assets/img/placeholder.jpg" alt="Restaurant logo" id="profile-image">
+                        
+                        <label for="file-upload" class="btn-upload" id="upload-btn" aria-label="Upload new restaurant logo">
+                            <span class="icon" aria-hidden="true">📷</span>
+                            <span>Change Logo</span>
+                        </label>
+                        
+                        <input type="file" id="file-upload" accept="image/*" class="hidden" aria-hidden="true">
+                    </div>
+                    
                         
                         <form class="profile-form">
                             <div class="form-group">

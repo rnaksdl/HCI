@@ -1,3 +1,10 @@
+/* Scroll animation when clicking header */
+html 
+{
+    scroll-behavior: smooth;
+}
+
+
 /* General Styles */
 body 
 {
@@ -25,6 +32,11 @@ body
     color: black;
 }
 
+.header a:hover
+{
+    color: gray;
+}
+
 /* Login Button - Positioned to Top Right */
 .loginButton 
 {
@@ -40,10 +52,15 @@ body
     border-radius: 10px;
 }
 
+.loginButton:hover
+{
+    background-color: rgb(62, 62, 62);
+}
+
 /* Main Section */
 .hero 
 {
-    padding: 100px 0;
+    padding: 75px 0;
     font-family: 'Poiret One', sans-serif;
 }
 
@@ -61,6 +78,12 @@ body
 
 }
 
+.getStarted:hover
+{
+    background-color: rgb(238, 238, 238);
+    border-color: gray;
+}
+
 /* Black Section (Extends All the Way Down) */
 .blackSection 
 {
@@ -70,14 +93,14 @@ body
     min-height: 100vh; /* Ensures it fills the screen */
 }
 
-/* Features Section - Left Aligned */
+/* Features Section */
 .features 
 {
     text-align: left;
     font-family: 'Poiret One', sans-serif;
 }
 
-/* About Us Section - Centered */
+/* About Us Section*/
 .about 
 {
     text-align: center;
@@ -101,6 +124,7 @@ body
 .title 
 {
     font-size: 10vw; /* Scales based on screen width */
+    margin-top: 10px;
 }
 
 .subtitle 
@@ -110,6 +134,63 @@ body
 
 .logo
 {
-    width: 75px;
+    width: 100px;
 }
 
+/* Black wave styling for welcome page to merge into black section */
+.blackWave {
+    position: relative;
+    width: 100%;
+    height: 120px;
+    background: black;
+    z-index: 1;
+    margin-bottom: -5px; /* Smooth out overlap */
+
+    mask: url("data:image/svg+xml,%3Csvg viewBox='0 0 1200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 120C300 180 900 60 1200 120L1200 200L0 200Z' fill='white'/%3E%3C/svg%3E") no-repeat bottom;
+    -webkit-mask: url("data:image/svg+xml,%3Csvg viewBox='0 0 1200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 120C300 180 900 60 1200 120L1200 200L0 200Z' fill='white'/%3E%3C/svg%3E") no-repeat bottom;
+    mask-size: cover;
+    -webkit-mask-size: cover;
+}
+
+/* Styling for features */
+.featureOption,
+.featureOptionReverse 
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 64px;
+  margin: 30px auto;
+  flex-wrap: wrap;
+}
+
+.featureOption h3,
+.featureOption p 
+{
+  max-width: 500px;
+  text-align: center;
+}
+
+.featureOptionReverse h3,
+.featureOptionReverse p 
+{
+  max-width: 500px;
+  text-align: center;
+}
+
+/* Image styling */
+.featureOption img,
+.featureOptionReverse img 
+{
+  width: 400px;
+  height: auto;
+  object-fit: contain;
+  align-items: center;
+}
+
+.featureText 
+{
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+  }

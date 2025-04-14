@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Restaurant menu creation and management">
+    <title>Menu Management | Restaurant Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel="stylesheet" href="../../assets/css/pages/menu.css">
+    <link rel="stylesheet" href="../../assets/css/pages/menuDashboard.css">
+</head>
+<body>
+    <section class="mainBody">
+        <div class="restaurantNameBox">
+            City Diner Menu
+        </div>
+        <div onclick="window.location.href='entreesCustomer.html'" class="groupBox">
+            Entrees
+        </div>
+        <div class="groupBox" onclick="window.location.href='sidesCustomer.html'">
+            Sides
+        </div>
+        <div class="groupBox" onclick="window.location.href='drinksCustomer.html'">
+            Drinks
+        </div>
+        <div class="groupBox">
+            Deserts
+        </div>
+            <button type="submit" class="submitButton" id="checkout" onclick="window.location.href='viewCart.html'">View Your Cart</button>
+    </section>
+    <script src="../../assets/js/common.js"></script>
+    <script src="../../assets/js/pages/menu.js"></script>
+</body>
+</html>
