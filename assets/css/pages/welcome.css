@@ -1,5 +1,6 @@
 /* Scroll animation when clicking header */
-html {
+html 
+{
     scroll-behavior: smooth;
 }
 
