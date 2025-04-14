@@ -96,11 +96,70 @@
 
 .mods {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 22px;
-  font-weight: bolder;
   height: 48px;
+}
+
+.modTitle {
+  justify-content: center;
+  align-items: center;
+}
+
+.actualMods {
+  flex-direction: row;
+  gap: 10px;
+  font-size: 15px;
+}
+
+.modList {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.modItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+}
+
+.modItem span {
+  font-size: 16px;
+  margin-right: 8px;
+}
+
+.modEditBtn {
+  font-size: 13px;
+  margin-right: 5px;
+  background-color: #4CAF50;
+  color: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 40px;
+}
+
+.modEditBtn:hover {
+  background-color: #45a049;
+  cursor: pointer;
+}
+
+.modDeleteBtn {
+  font-size: 13px;
+  margin-right: 5px;
+  background-color: #f44336;
+  color: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 45px;
+}
+
+.modDeleteBtn:hover {
+  background-color: #d32f2f;
+  cursor: pointer;
 }
 
 .addEntry {
@@ -193,6 +252,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: flex-start;
+  font-family: sans-serif;
 }
 
 .formLeft {
@@ -224,13 +284,43 @@
   padding: 5px;
 }
 
+.addMods {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 10px;
+}
+
+.addMods label {
+  font-size: 25px;
+}
+
+.modAndBtn input {
+  width: 200px;
+  height: 30px;
+  background-color: white;
+  border: 1px solid #919191;
+  border-radius: 10px;
+  font-size: 15px;
+  padding: 5px;
+}
+
+.modAndBtn button {
+  width: 50px;
+  height: 25px;
+}
+
+.modAndBtn button:hover {
+  background-color: lightgray;
+  cursor: pointer;
+}
+
 .formRight {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   height: 250px;
   width: 300px;
-  margin-top: 16px;
 }
 
 .itemImage {
@@ -245,7 +335,7 @@
 }
 
 .modalSubmitBtn {
-  width: 250px;
+  width: 200px;
   padding: 10px;
   margin: 20px;
   border: 2px solid black;

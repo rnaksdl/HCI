@@ -61,6 +61,14 @@
                             <label for="itemImage">Image (optional):</label>
                             <input type="file" id="itemImage" name="itemImage" accept="image/*">
                          </div>
+                         
+                         <div class="addMods">
+                            <label for="modBox">Add a modification:</label>
+                            <div class="modAndBtn">
+                                <input type="text" id="modBox" name="modBox" placeholder="Add mod">
+                                <button class="modAddBtn">ADD</button>
+                            </div>
+                         </div>
                     </div>
                     <div class="formRight">
                         <div class="itemPrice">
@@ -105,7 +113,19 @@
                     This killer burger comes with cheese, lettuce, mayo, tomatoes and is grilled to perfection!
                 </div>
                 <div class="mods">
-                    + Modifications
+                    <div class="modTitle">
+                        Add Modifications:
+                    </div>
+                    <div class="actualMods">
+                        <input type="checkbox" name="pickles" id="pickles">
+                        <label for="pickles">pickles</label>
+
+                        <input type="checkbox" name="mustard" id="mustard">
+                        <label for="mustard">mustard</label>
+
+                        <input type="checkbox" name="onions" id="onions">
+                        <label for="onions">onions</label>
+                    </div>
                 </div>
             </div>
         </div>
