@@ -80,11 +80,6 @@ button:hover
     gap: 5px;
     white-space: nowrap; /* Prevents line breaks */
 }
-
-.rememberMe a:hover
-{
-    color:gray;
-}
   
 .hidden 
 {
