@@ -81,3 +81,38 @@
     color: #fff;
     background-color: #2ecc71;
 }
+
+.status.completed {
+    color: #fff;
+    background-color: #332ecc;
+}
+
+.orderNavigation {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.orderBtn {
+    padding: 10px 20px;
+    margin: 0 1rem;
+    background-color: #000c17;
+    border: 1px solid #ffffff;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.orderBtn.active {
+    background-color: #012040;
+    color: white;
+    border-color: #000000;
+}
+
+.orderBtn:hover {
+    background-color: #223549;
+}
+
+.ordersContainer {
+    margin-top: 1rem;
+}

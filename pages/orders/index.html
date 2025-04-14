@@ -38,11 +38,19 @@
         </nav>
 
         <section class="mainBody">
-            <div class="titleBox">
-                Current Orders
-            </div>
+        <div class="orderNavigation">
+            <button class="orderBtn active" onclick="showOrders('current')">Current Orders</button>
+            <button class="orderBtn" onclick="showOrders('past')">Past Orders</button>
+        </div>
+
         
-            <div class="ordersContainer">
+            
+
+        <div class="ordersContainer">
+            <div class="currentOrders">
+                <div class="titleBox">
+                Current Orders
+                 </div>
                 <div class="orderBox">
                     <h3>Order #1023</h3>
                     <ul class="orderItems">
@@ -53,7 +61,7 @@
                     </li>
                     <p>Status: <span class="status preparing">Preparing</span></p>
                 </div>
-        
+                
                 <div class="orderBox">
                     <h3>Order #1024</h3>
                     <ul class="orderItems">
@@ -67,4 +75,26 @@
                     <p>Status: <span class="status ready">Ready</span></p>
                 </div>
             </div>
+        </div>
+
+            <div class="pastOrders">
+                <div class="titleBox">
+                    Past Orders
+                     </div>
+                <div class="orderBox">
+                    <h3>Order #1022</h3>
+                        <ul class="orderItems">
+                            <li>1x Slippery Salmon
+                                <ul class="Modifications">
+                                    <li>Extra Mayonnaise</li> 
+                                </ul>
+                            </li>
+                        </ul>
+                        <p>Status: <span class="status completed">Completed</span></p>
+                </div>
+        </div> 
         </section>
+        <script src="../../pages/orders/orders.js"></script>
+        <div class="wave" aria-hidden="true"></div>
+    </body>
+    </html>
