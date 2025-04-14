@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrees</title>
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel="stylesheet" href="../../assets/css/pages/entrees.css">
+    <link rel="stylesheet" href="../../assets/css/pages/groupCustomers.css">
+    <link rel="stylesheet" href="../../assets/css/pages/menu.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <div  onclick="window.location.href='menuDashboard.html'" class="backArrow">
+        <img src="../../assets/img/backArrow.png" alt="Back">
+    </div>
+
+    <section class="mainBody">
+        <div class="entryName">
+            Your Cart
+        </div>
+
+        <div class="entryPlusAdd">
+            <div class="entry">
+                <div class="entryImage">
+                    <img src="../../assets/img/killerBurger.png" alt="Burger">
+                </div>
+                <div class="nameAndPrice">
+                    <div class="mainName">
+                        <b>The Killer Burger Meal</b>
+                    </div>
+                    <div class="price">
+                        $22.99
+                    </div>
+                </div>
+                <div class="descAndMods">
+                    <div class="description">
+                        This killer burger comes with cheese, lettuce, mayo, tomatoes and is grilled to perfection!
+                    </div>
+                    <div class="mods">
+                        <div class="modTitle">
+                            Add Modifications:
+                        </div>
+                        <div class="actualMods">
+                            <input type="checkbox" name="pickles" id="pickles">
+                            <label for="pickles">pickles</label>
+    
+                            <input type="checkbox" name="mustard" id="mustard">
+                            <label for="mustard">mustard</label>
+    
+                            <input type="checkbox" name="onions" id="onions">
+                            <label for="onions">onions</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="remove" class="addToCart">
+                <button class="removeBtn">Remove</button>
+            </div>  
+        </div>
+
+        <div class="entryPlusAdd">
+            <div class="entry">
+                <div class="entryImage">
+                    <img src="../../assets/img/apple-whole-solid.svg" alt="Burger">
+                </div>
+                <div class="nameAndPrice">
+                    <div class="mainName">
+                        <b>Red Delicious Apple</b>
+                    </div>
+                    <div class="price">
+                        $2.50
+                    </div>
+                </div>
+                <div class="descAndMods">
+                    <div class="description">
+                        Sourced from a local orchard, they're said to keep medical professionals at bay.
+                    </div>
+                    <div class="mods">
+                        <div class="modTitle">
+                            Add Modifications:
+                        </div>
+                        <div class="actualMods">
+                            <input type="checkbox" name="pickles" id="pickles">
+                            <label for="pickles">caramel</label>
+    
+                            <input type="checkbox" name="mustard" id="mustard">
+                            <label for="mustard">peanut butter</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="remove" class="addToCart">
+                <button class="removeBtn">Remove</button>
+            </div>  
+        </div>
+
+        <div class="entryPlusAdd">
+            <div class="entry">
+                <div class="entryImage">
+                    <img src="../../assets/img/definitelySoda.png" alt="Burger">
+                </div>
+                <div class="nameAndPrice">
+                    <div class="mainName">
+                        <b>Killer Cola</b>
+                    </div>
+                    <div class="price">
+                        $3.00
+                    </div>
+                </div>
+                <div class="descAndMods">
+                    <div class="description">
+                        Our killer cola is hand crafted and one of our original menu items. Give it a try!
+                    </div>
+                    <div class="mods">
+                        <div class="modTitle">
+                            Add Modifications:
+                        </div>
+                        <div class="actualMods">
+                            <input type="checkbox" name="pickles" id="pickles">
+                            <label for="pickles">coconut</label>
+    
+                            <input type="checkbox" name="mustard" id="mustard">
+                            <label for="mustard">pineapple</label>
+
+                            <input type="checkbox" name="mustard" id="mustard">
+                            <label for="mustard">hazelnut</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="remove" class="addToCart">
+                <button class="removeBtn">Remove</button>
+            </div> 
+        </div>
+
+        <div class="totalAndCheckout">
+            <p>Total: $28.49</p>
+            <button class="submitButton" id="checkoutBtn" onclick="window.location.href='trueCheckout.html'">Proceed To Checkout</button>
+        </div>
+    </section>
+
+<script src="../../assets/js/pages/groupCustomers.js"></script>
+</body>
+</html>
