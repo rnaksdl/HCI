@@ -1,3 +1,7 @@
+h1 {
+  font-family: 'Poiret One', sans-serif;
+}
+
 .charts {
     display: grid;
     grid-template-columns: 1fr;
