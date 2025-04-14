@@ -179,6 +179,9 @@ function validateSignupForm()
     if (!valid) 
     {
         summaryError.textContent = "Please fix the errors above before submitting.";
+    } else if (valid) // This is just to allow users to get the analytics (there is no actual sign up happening)
+    {
+        window.location.href = "../analytics/index.html";
     }
 
     return valid;
@@ -229,8 +232,13 @@ function validateLoginForm()
     {
       summaryError.textContent = "Please fix the errors above before submitting.";
     }
+    else if (valid)
+    {
+        window.location.href = "../analytics/index.html";
+    }
   
-    return valid;
+
+    return false;
 }
   
 // Helper Functions
