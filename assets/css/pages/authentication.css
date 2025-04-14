@@ -45,6 +45,11 @@ button
     border-radius: 10px;
 }
 
+button:hover
+{
+    background-color: rgb(62, 62, 62);
+}
+
 
 .rememberForgot 
 {
@@ -74,6 +79,11 @@ button
     align-items: center;
     gap: 5px;
     white-space: nowrap; /* Prevents line breaks */
+}
+
+.rememberMe a:hover
+{
+    color:gray;
 }
   
 .hidden 
