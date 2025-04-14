@@ -32,6 +32,11 @@ body
     color: black;
 }
 
+.header a:hover
+{
+    color: gray;
+}
+
 /* Login Button - Positioned to Top Right */
 .loginButton 
 {
@@ -45,6 +50,11 @@ body
     cursor: pointer;
     font-family: 'Poiret One', sans-serif;
     border-radius: 10px;
+}
+
+.loginButton:hover
+{
+    background-color: rgb(62, 62, 62);
 }
 
 /* Main Section */
@@ -66,6 +76,12 @@ body
     font-size: 18px;
     border-radius: 10px;
 
+}
+
+.getStarted:hover
+{
+    background-color: rgb(238, 238, 238);
+    border-color: gray;
 }
 
 /* Black Section (Extends All the Way Down) */
