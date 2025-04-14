@@ -44,10 +44,25 @@ button {
 .rememberForgot {
     display: flex;
     justify-content: space-between;
-    font-size: 14px;
     align-items: center;
+    margin-top: 5px;
+    margin-bottom: 10px;
 }
 
+.forgotPassword {
+    font-size: 14px;
+    text-align: right;
+    text-decoration: none;
+}
+
+.rememberMe {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    white-space: nowrap; /* Prevents line breaks */
+}
+  
 .hidden {
     display: none;
 }
