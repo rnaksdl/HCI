@@ -158,3 +158,24 @@ hr.divider
     display: none;
 }
 
+
+.footer {
+    margin-top: 100px; /* Increased from 60px to 100px for more space */
+    padding-top: 30px;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.footer p {
+    font-size: 14px;
+    color: #000000;
+}
+
+.footer a {
+    color: #000000;
+    text-decoration: underline;
+}
+
+.footer a:hover {
+    opacity: 0.8;
+}
