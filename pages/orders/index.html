@@ -46,23 +46,27 @@
         
             
 
-        <div class="ordersContainer">
-            <div class="currentOrders">
-                <div class="titleBox">
-                Current Orders
-                 </div>
-                <div class="orderBox">
+        
+        <div class="currentOrders" style="display: block;">
+            <div class="titleBox">Current Orders</div>
+        
+            <div class="ordersContainer">
+                <div class="orderBox" id = "order-1023">
                     <h3>Order #1023</h3>
                     <ul class="orderItems">
                         <li>1x Killer Burger Meal
-                            <ul class="Modifications">
+                            <ul class="modifications">
                                 <li>No ketchup</li>
-                        </ul>
-                    </li>
-                    <p>Status: <span class="status preparing">Preparing</span></p>
-                </div>
-
-                <div class="orderBox">
+                            </ul>
+                        </li>
+                    </ul>
+                    <p class="statusContainer">
+                        Status: <span class="status preparing">Preparing</span>
+                      </p>
+                      <button class="statusBtn" onclick="changeStatus(this, '1023')">Change Status</button>
+                    </div>
+        
+                <div class="orderBox" id = "order-1024">
                     <h3>Order #1024</h3>
                     <ul class="orderItems">
                         <li>Deep Sea Steak
@@ -72,16 +76,19 @@
                         </li>
                         <li>1x Lemonade</li>
                     </ul>
-                    <p>Status: <span class="status ready">Ready</span></p>
+                    <p class="statusContainer">
+                        Status: <span class="status ready">Ready</span></p>
+                        <button class="statusBtn" onclick="changeStatus(this, '1024')">Change Status</button>
                 </div>
             </div>
         </div>
 
-            <div class="pastOrders" style="display: none;">
-                <div class="titleBox">
-                    Past Orders
-                     </div>
-                <div class="orderBox">
+
+        <div class="pastOrders" style="display: none;">
+            <div class="titleBox">Past Orders</div>
+
+        <div class="ordersContainer">
+                <div class="orderBox" id = 'order-1022'>
                     <h3>Order #1022</h3>
                         <ul class="orderItems">
                             <li>1x Slippery Salmon
@@ -90,9 +97,12 @@
                                 </ul>
                             </li>
                         </ul>
-                        <p>Status: <span class="status completed">Completed</span></p>
+                        <p class="statusContainer">
+                            Status: <span class="status completed">Completed</span></p>
+                            <button class="statusBtn" onclick="changeStatus(this, '1022')">Change Status</button>
                 </div>
-        </div> 
+            </div> 
+        </div>
         </section>
         <script src="../../pages/orders/orders.js"></script>
         <div class="wave" aria-hidden="true"></div>
