@@ -45,9 +45,10 @@
     background-color: black;
     color: white;
     font-size: 70px;
+    font-weight: bolder;
 }
 .groupBox {
-    width: 600px;
+    width: 300px;
     padding: 20px;
     margin: 30px;
     border: 2px solid black;
@@ -55,7 +56,8 @@
     text-align: center;
     background-color: black;
     color: white;
-    font-size: 60px;
+    font-size: 40px;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .groupBox:hover {
@@ -64,13 +66,14 @@
 }
 
 .addNewGroup {
-    width: 900px;
+    width: 500px;
     height: 100px;
     margin: 30px;
     display: flex;
-    justify-content: flex-start;
+    justify-content: flex-end;
     align-items: center;
     flex-direction: row;
+    font-weight: bolder;
 }
 
 .textEntry {
@@ -78,26 +81,26 @@
     justify-content: flex-start;
     padding-left: 10px;
     align-items: center;
-    width: 800px;
-    height: 100px;
+    width: 400px;
+    height: 75px;
     margin: 30px;
     border: 2px solid black;
     border-radius: 10px;
     text-align: left;
     background-color: #323232;
     color: white;
-    font-size: 40px;
+    font-size: 30px;
 }
 
 .submitButton {
     padding: 5px;
-    width: 300px;
+    width: 200px;
     height: 75px;
     border: 2px solid black;
     border-radius: 10px;
     background-color: black;
     color: white;
-    font-size: 40px;
+    font-size: 30px;
 
 }
 
@@ -110,13 +113,13 @@
   position: fixed;   /* keeps the button fixed relative to the viewport */
   top: 20px;
   right: 20px;
-  width: 150px;
-  height: 100px;
+  width: 100px;
+  height: 75px;
   border: 2px solid black;
   border-radius: 10px;
   background-color: black;
   color: white;
-  font-size: 30px;
+  font-size: 20px;
   font-family: 'Poiret One', cursive;
   z-index: 1001; /* ensures the button is above other content */
   cursor: pointer;
