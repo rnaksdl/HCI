@@ -133,12 +133,20 @@ function validateSignupForm()
         cityError.textContent = "City is required.";
         city.classList.add("inputError");
         valid = false;
+    } else if (!isAlphabetic(city.value.trim())) {
+        cityError.textContent = "City must be composed of only alphabetic letters (A-Z) or (a-z)."
+        city.classList.add("inputError");
+        valid = false;
     }
 
     // State/Province errors: empty (Maybe can input a letter checker)
     if (stateProvince.value.trim() === "") 
     {
         stateProvinceError.textContent = "State/Province is required.";
+        stateProvince.classList.add("inputError");
+        valid = false;
+    } else if (!isAlphabetic(stateProvince.value.trim())) {
+        stateProvinceError.textContent = "State/Province must be composed of only alphabetic letters (A-Z) or (a-z).";
         stateProvince.classList.add("inputError");
         valid = false;
     }
@@ -161,12 +169,16 @@ function validateSignupForm()
         countryError.textContent = "Country is required.";
         country.classList.add("inputError");
         valid = false;
+    } else if (!isAlphabetic(country.value.trim())) {
+        countryError.textContent = "Country must be composed of only alphabetic letters (A-Z or a-z)."
+        country.classList.add("inputError");
+        valid = false;
     }
 
     // Phone errors: not empty, then must be numeric format
     if (phoneNumber.value.trim().length > 0 && !isPhoneValid(phoneNumber.value.trim())) 
     {
-        phoneNumberError.textContent = "Phone number must contain 7-15 numbers (0-9)";
+        phoneNumberError.textContent = "Phone number must be in the format of XXX-XXX-XXXX";
         phoneNumber.classList.add("inputError");
         valid = false;
     }
@@ -237,7 +249,7 @@ function validateLoginForm()
     return false;
 }
   
-// Helper Functions
+// Helper Functions (Checks given fields inputs for required format, etc.)
 function isEmailValid(email) 
 {
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -266,5 +278,6 @@ function isZipValid(zip)
 
 function isPhoneValid(phone) 
 {
-    return /^\+?[0-9\-()\s]{7,15}$/.test(phone);
+    return /^\d{3}-\d{3}-\d{4}$/.test(phone);
+
 }
