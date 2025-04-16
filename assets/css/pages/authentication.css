@@ -202,3 +202,10 @@ input.inputError
     border: 1px solid red !important;
     background-color: #fff0f0;
 }
+
+.passwordRequirements
+{
+    margin-bottom: 10px;
+    margin-left: 30px;
+}
+
