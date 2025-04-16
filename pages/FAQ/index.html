@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KillerSale POS - FAQ</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../assets/css/main.css">
+
     <style>
         :root {
             --primary-color: #000;
@@ -14,7 +17,7 @@
         
         * {
             box-sizing: border-box;
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            font-family: 'Open Sans', sans-serif; /* Default font for general text */
         }
         
         body {
@@ -25,16 +28,53 @@
             line-height: 1.6;
         }
         
+        /* Back button styling */
+        .back-button {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            padding: 10px 15px;
+            background-color: var(--primary-color);
+            color: var(--background-color);
+            border: none;
+            border-radius: 4px;
+            font-family: 'Poiret One', cursive;
+            font-size: 16px;
+            cursor: pointer;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            z-index: 1000;
+        }
+        
+        .back-button:hover {
+            opacity: 0.9;
+        }
+        
+        .back-button::before {
+            content: "←";
+            margin-right: 5px;
+            font-size: 18px;
+        }
+        
         .container {
             max-width: 900px;
             margin: 0 auto;
             padding: 2rem;
         }
         
+        /* Use Poiret One for headings, matching welcome page */
+        h1, h2, h3 {
+            font-family: 'Poiret One', cursive;
+            font-weight: 400;
+            letter-spacing: 1px;
+        }
+        
         h1 {
             font-size: 2.5rem;
             margin-bottom: 1rem;
             text-align: center;
+            text-transform: uppercase; /* Match welcome page style */
         }
         
         .faq-description {
@@ -112,6 +152,7 @@
             border-radius: 4px;
             margin-top: 1rem;
             transition: opacity 0.2s ease;
+            font-family: 'Poiret One', cursive;
         }
         
         .contact-button:hover {
@@ -134,9 +175,13 @@
     </style>
 </head>
 <body>
+    <!-- Add the back button -->
+    <a href="/" class="back-button">Home</a>
+
     <div class="container">
         <h1>Frequently Asked Questions</h1>
         <p class="faq-description">Find answers to common questions about KillerSale POS system for small businesses.</p>
+        
         
         <div class="faq-category">
             <h2>General Questions</h2>
