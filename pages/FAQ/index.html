@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KillerSale POS - FAQ</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../assets/css/main.css">
+
     <style>
         :root {
             --primary-color: #000;
@@ -14,7 +17,7 @@
         
         * {
             box-sizing: border-box;
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            font-family: 'Open Sans', sans-serif; /* Default font for general text */
         }
         
         body {
@@ -25,16 +28,40 @@
             line-height: 1.6;
         }
         
+        
         .container {
             max-width: 900px;
             margin: 0 auto;
             padding: 2rem;
         }
         
+        /* Use Poiret One for headings, matching welcome page */
+        h1, h2, h3 {
+            font-family: 'Poiret One', cursive;
+            font-weight: 400;
+            letter-spacing: 1px;
+        }
+
+        .formBackLink {
+        position: absolute;
+        top: 15px;
+        left: 20px;
+        font-family: 'Poiret One', sans-serif;
+        text-decoration: none;
+        color: black;
+        font-size: 18px;
+        transition: color 0.2s ease;
+    }
+    
+    .formBackLink:hover {
+        color: gray;
+    }
+        
         h1 {
             font-size: 2.5rem;
             margin-bottom: 1rem;
             text-align: center;
+            text-transform: uppercase; /* Match welcome page style */
         }
         
         .faq-description {
@@ -112,6 +139,7 @@
             border-radius: 4px;
             margin-top: 1rem;
             transition: opacity 0.2s ease;
+            font-family: 'Poiret One', cursive;
         }
         
         .contact-button:hover {
@@ -130,13 +158,23 @@
             .faq-category h2 {
                 font-size: 1.5rem;
             }
+
+            .formBackLink {
+            top: 10px;
+            left: 15px;
+        }
         }
     </style>
 </head>
 <body>
+
+
     <div class="container">
+        <a href="../../index.html" class="formBackLink">← Back</a>
+
         <h1>Frequently Asked Questions</h1>
         <p class="faq-description">Find answers to common questions about KillerSale POS system for small businesses.</p>
+        
         
         <div class="faq-category">
             <h2>General Questions</h2>
@@ -338,14 +376,14 @@
             <div class="faq-item">
                 <div class="faq-question">Can I see a demo before signing up?</div>
                 <div class="faq-answer">
-                    <p>Yes! Click on <span class="bold">View Demo</span> on our homepage to explore a fully-functional sample restaurant setup without creating an account.</p>
+                    <p>Yes! Click on <span class="bold">Features</span> on our homepage to explore a sample restaurant setup without creating an account.</p>
                 </div>
             </div>
         </div>
         
         <footer>
             <p>Still have questions? We're here to help!</p>
-            <a href="mailto:support@killersale.com" class="contact-button">Contact Support</a>
+            <a href="mailto:example@killersale.com" class="contact-button">Contact Support</a>
         </footer>
     </div>
     
