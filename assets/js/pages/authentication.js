@@ -135,7 +135,7 @@ function validateSignupForm()
         valid = false;
     }
 
-    // State/Province errors: empty
+    // State/Province errors: empty (Maybe can input a letter checker)
     if (stateProvince.value.trim() === "") 
     {
         stateProvinceError.textContent = "State/Province is required.";
@@ -150,7 +150,7 @@ function validateSignupForm()
         zip.classList.add("inputError");
         valid = false;
     } else if (!isZipValid(zip.value.trim())) {
-        zipError.textContent = "Zip code must be composed of only numbers (0-9)";
+        zipError.textContent = "Zip code must be composed of only 5 numbers (0-9)";
         zip.classList.add("inputError");
         valid = false;
     }
@@ -163,14 +163,10 @@ function validateSignupForm()
         valid = false;
     }
 
-    // Phone errors: empty, not numeric format
-    if (phoneNumber.value.trim() === "") 
+    // Phone errors: not empty, then must be numeric format
+    if (phoneNumber.value.trim().length > 0 && !isPhoneValid(phoneNumber.value.trim())) 
     {
-        phoneNumberError.textContent = "Phone number is required.";
-        phoneNumber.classList.add("inputError");
-        valid = false;
-    } else if (!isPhoneValid(phoneNumber.value.trim())) {
-        phoneNumberError.textContent = "Phone number must be composed of 10 numbers.";
+        phoneNumberError.textContent = "Phone number must contain 7-15 numbers (0-9)";
         phoneNumber.classList.add("inputError");
         valid = false;
     }
@@ -181,10 +177,10 @@ function validateSignupForm()
         summaryError.textContent = "Please fix the errors above before submitting.";
     } else if (valid) // This is just to allow users to get the analytics (there is no actual sign up happening)
     {
-        window.location.href = "../analytics/index.html";
+        window.location.href = "../analytics/index.html"; 
     }
 
-    return valid;
+    return false;
 }
   
 // Login validation (cusotm errors)
