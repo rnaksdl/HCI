@@ -15,6 +15,17 @@ A human-centered Point of Sale system designed for small businesses with a focus
 - **Responsive Design**: Works seamlessly across desktop, tablet, and mobile devices
 - **Offline Capability**: Continue core operations during internet outages with automatic synchronization
 
+## Screenshots
+
+![Analytics](assets/img/Analytics.png)
+*Welcome page with key features and navigation*
+
+![Menu Managemet](assets/img/MenuCreation.png)
+*Analytics dashboard showing sales data visualizations*
+
+![Orders](assets/img/Orders.png)
+*Menu creation and management interface*
+
 
 ## Installation & Setup
 1. Clone the repository
