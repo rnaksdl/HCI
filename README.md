@@ -12,6 +12,7 @@ File structure
 ```
 /
 ├── index.html (redirects to analytics page)
+├── README.md
 ├── assets/
 │   ├── css/
 │   │   ├── main.css (shared styles)
@@ -19,24 +20,62 @@ File structure
 │   │   │   └── sidebar.css
 │   │   └── pages/
 │   │       ├── analytics.css
+│   │       ├── authentication.css
+│   │       ├── entrees.css
+│   │       ├── groupCustomers.css
 │   │       ├── menu.css
+│   │       ├── menuDashboard.css
 │   │       ├── orders.css
-│   │       └── profile.css
+│   │       ├── profile.css
+│   │       └── welcome.css
 │   ├── js/
-│   │   ├── common.js (sidebar functionality)
+│   │   ├── common/
+│   │   │   └── common.js
 │   │   └── pages/
 │   │       ├── analytics.js
+│   │       ├── authentication.js
+│   │       ├── entrees.js
+│   │       ├── groupCustomers.js
 │   │       ├── menu.js
-│   │       ├── orders.js
-│   │       └── profile.js
+│   │       ├── profile.js
+│   │       ├── trueCheckout.js
+│   │       └── welcome.js
 │   └── img/
-│       └── placeholder.jpg
+│   │   ├── AllInOne.png
+│   │   ├── Analytics.png
+│   │   ├── apple-whole-solid.svg
+│   │   ├── backArrow.png
+│   │   ├── bowl-food-solid.svg
+│   │   ├── dawg.svg
+│   │   ├── defaultImage.png
+│   │   ├── definitelySoda.png
+│   │   ├── frenchBagel.png
+│   │   ├── killerBurger.png
+│   │   ├── KillerWhale.png
+│   │   ├── martini.png
+│   │   ├── MenuCreation.png
+│       └── Orders.png
 ├── pages/
 │   ├── analytics/
 │   │   └── index.html
+│   ├── authentication/
+│   │   └── index.html
+│   ├── customerVIew/
+│   │   ├── drinksCustomer.html
+│   │   ├── entreesCustomer.html
+│   │   ├── menuDashboard.html
+│   │   ├── sidesCustomer.html
+│   │   ├── trueCheckout.html
+│   │   └── viewCart.html
+│   │   ├── orders.js
+│   │   └── index.html
+│   ├── FAQ/
+│   │   └── index.html
 │   ├── menu/
+│   │   ├── entrees.html
 │   │   └── index.html
 │   ├── orders/
+│   │   ├── orders.js
 │   │   └── index.html
 │   └── profile/
 │       └── index.html
