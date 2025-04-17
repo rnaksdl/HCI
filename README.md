@@ -1,4 +1,10 @@
-# HCI
+# KillerSale POS System
+
+![KillerSale Logo](assets/img/KillerWhale.png)
+
+A human-centered Point of Sale system designed for small businesses with a focus on minimizing cognitive load and maximizing efficiency.
+
+
 
 Libraries used:
 Charts.js
