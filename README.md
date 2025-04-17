@@ -41,42 +41,42 @@ File structure
 │   │       ├── trueCheckout.js
 │   │       └── welcome.js
 │   └── img/
-│   │   ├── AllInOne.png
-│   │   ├── Analytics.png
-│   │   ├── apple-whole-solid.svg
-│   │   ├── backArrow.png
-│   │   ├── bowl-food-solid.svg
-│   │   ├── dawg.svg
-│   │   ├── defaultImage.png
-│   │   ├── definitelySoda.png
-│   │   ├── frenchBagel.png
-│   │   ├── killerBurger.png
-│   │   ├── KillerWhale.png
-│   │   ├── martini.png
-│   │   ├── MenuCreation.png
+│       ├── AllInOne.png
+│       ├── Analytics.png
+│       ├── apple-whole-solid.svg
+│       ├── backArrow.png
+│       ├── bowl-food-solid.svg
+│       ├── dawg.svg
+│       ├── defaultImage.png
+│       ├── definitelySoda.png
+│       ├── frenchBagel.png
+│       ├── killerBurger.png
+│       ├── KillerWhale.png
+│       ├── martini.png
+│       ├── MenuCreation.png
 │       └── Orders.png
-├── pages/
-│   ├── analytics/
-│   │   └── index.html
-│   ├── authentication/
-│   │   └── index.html
-│   ├── customerVIew/
-│   │   ├── drinksCustomer.html
-│   │   ├── entreesCustomer.html
-│   │   ├── menuDashboard.html
-│   │   ├── sidesCustomer.html
-│   │   ├── trueCheckout.html
-│   │   └── viewCart.html
-│   │   ├── orders.js
-│   │   └── index.html
-│   ├── FAQ/
-│   │   └── index.html
-│   ├── menu/
-│   │   ├── entrees.html
-│   │   └── index.html
-│   ├── orders/
-│   │   ├── orders.js
-│   │   └── index.html
-│   └── profile/
-│       └── index.html
+└── pages/
+    ├── analytics/
+    │   └── index.html
+    ├── authentication/
+    │   └── index.html
+    ├── customerVIew/
+    │   ├── drinksCustomer.html
+    │   ├── entreesCustomer.html
+    │   ├── menuDashboard.html
+    │   ├── sidesCustomer.html
+    │   ├── trueCheckout.html
+    │   └── viewCart.html
+    │   ├── orders.js
+    │   └── index.html
+    ├── FAQ/
+    │   └── index.html
+    ├── menu/
+    │   ├── entrees.html
+    │   └── index.html
+    ├── orders/
+    │   ├── orders.js
+    │   └── index.html
+    └── profile/
+        └── index.html
 ```
