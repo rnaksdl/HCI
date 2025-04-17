@@ -3,8 +3,8 @@
 
 ## Team Members
 - Kyumin Lee
-- Raleigh Savage
 - Lyndsey Dong
+- Raleigh Savage
 - Ben Yokell
 
 A human-centered Point of Sale system designed for small businesses with a focus on minimizing cognitive load and maximizing efficiency.
