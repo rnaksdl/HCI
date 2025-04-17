@@ -18,10 +18,14 @@ A human-centered Point of Sale system designed for small businesses with a focus
 
 ## Installation & Setup
 1. Clone the repository
+```
 git clone https://github.com/rnaskdl/HCI.git
+```
 2. Navigate to the project directory
-```cd killersale```
-3. Open index.html in your browser or use a local development server
+```
+cd killersale
+```
+4. Open index.html in your browser or use a local development server
 
 
 
