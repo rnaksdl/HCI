@@ -1,8 +1,29 @@
 # KillerSale POS System
-
 ![KillerSale Logo](assets/img/KillerWhale.png)
 
+## Team Members
+- Kyumin Lee
+- Raleigh Savage
+- Lyndsey Dong
+- Ben Yokell
+
 A human-centered Point of Sale system designed for small businesses with a focus on minimizing cognitive load and maximizing efficiency.
+- **All-in-One POS**: Manage both business and customer interfaces in a single application
+- **Real-Time Analytics**: View menu popularity, profit trends, and foot traffic through intuitive visualizations
+- **Custom Menu Creation**: Easily create and modify menu items with descriptions, prices, and modifications
+- **Order Tracking**: Monitor current and past orders with clear status indicators
+- **Responsive Design**: Works seamlessly across desktop, tablet, and mobile devices
+- **Offline Capability**: Continue core operations during internet outages with automatic synchronization
+
+
+## Installation & Setup
+1. Clone the repository
+git clone https://github.com/rnaskdl/HCI.git
+2. Navigate to the project directory
+```cd killersale```
+3. Open index.html in your browser or use a local development server
+
+
 
 
 
