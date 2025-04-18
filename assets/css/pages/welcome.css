@@ -107,7 +107,7 @@ body
     font-family: 'Poiret One', sans-serif;
 }
 
-/* Responsive Fix */
+/* Responsive Fix for changing webpage size */
 @media (max-width: 600px) 
 {
     .header 
@@ -121,17 +121,20 @@ body
     }
 }
 
+/* KillerSale title */
 .title 
 {
     font-size: 10vw; /* Scales based on screen width */
     margin-top: 10px;
 }
 
+/* Stay Orcanized */
 .subtitle 
 {
     font-size: 3vw; /* Adjust as needed */
 }
 
+/* Killer Whale picture */
 .logo
 {
     width: 100px;
@@ -193,4 +196,4 @@ body
     display: flex;
     flex-direction: column;
     max-width: 500px;
-  }
+}
