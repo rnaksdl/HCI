@@ -242,6 +242,7 @@ function validateLoginForm()
     }
     else if (valid)
     {
+        // No actual authentication is happening nor storage, this is just for movement and demo/prototype to show how it works
         window.location.href = "../analytics/index.html";
     }
   

@@ -6,175 +6,14 @@
     <title>KillerSale POS - FAQ</title>
     <link href="https://fonts.googleapis.com/css2?family=Poiret+One&family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../assets/css/main.css">
-
-    <style>
-        :root {
-            --primary-color: #000;
-            --background-color: #fff;
-            --accent-color: #f5f5f5;
-            --border-color: #e0e0e0;
-        }
-        
-        * {
-            box-sizing: border-box;
-            font-family: 'Open Sans', sans-serif; /* Default font for general text */
-        }
-        
-        body {
-            margin: 0;
-            padding: 0;
-            color: var(--primary-color);
-            background-color: var(--background-color);
-            line-height: 1.6;
-        }
-        
-        
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-        
-        /* Use Poiret One for headings, matching welcome page */
-        h1, h2, h3 {
-            font-family: 'Poiret One', cursive;
-            font-weight: 400;
-            letter-spacing: 1px;
-        }
-
-        .formBackLink {
-        position: absolute;
-        top: 15px;
-        left: 20px;
-        font-family: 'Poiret One', sans-serif;
-        text-decoration: none;
-        color: black;
-        font-size: 18px;
-        transition: color 0.2s ease;
-    }
-    
-    .formBackLink:hover {
-        color: gray;
-    }
-        
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            text-align: center;
-            text-transform: uppercase; /* Match welcome page style */
-        }
-        
-        .faq-description {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-        
-        .faq-category {
-            margin-bottom: 2.5rem;
-        }
-        
-        .faq-category h2 {
-            font-size: 1.8rem;
-            margin-bottom: 1.5rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 2px solid var(--primary-color);
-        }
-        
-        .faq-item {
-            margin-bottom: 1rem;
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            overflow: hidden;
-        }
-        
-        .faq-question {
-            background-color: var(--accent-color);
-            padding: 1rem;
-            cursor: pointer;
-            font-weight: 600;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .faq-question::after {
-            content: "+";
-            font-size: 1.5rem;
-            transition: transform 0.3s ease;
-        }
-        
-        .faq-item.active .faq-question::after {
-            content: "−";
-        }
-        
-        .faq-answer {
-            padding: 0 1rem;
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease, padding 0.3s ease;
-        }
-        
-        .faq-item.active .faq-answer {
-            padding: 1rem;
-            max-height: 500px;
-        }
-        
-        .bold {
-            font-weight: 600;
-        }
-        
-        footer {
-            text-align: center;
-            margin-top: 3rem;
-            padding-top: 1rem;
-            border-top: 1px solid var(--border-color);
-        }
-        
-        .contact-button {
-            display: inline-block;
-            padding: 0.75rem 1.5rem;
-            background-color: var(--primary-color);
-            color: var(--background-color);
-            text-decoration: none;
-            border-radius: 4px;
-            margin-top: 1rem;
-            transition: opacity 0.2s ease;
-            font-family: 'Poiret One', cursive;
-        }
-        
-        .contact-button:hover {
-            opacity: 0.9;
-        }
-        
-        @media (max-width: 768px) {
-            .container {
-                padding: 1rem;
-            }
-            
-            h1 {
-                font-size: 2rem;
-            }
-            
-            .faq-category h2 {
-                font-size: 1.5rem;
-            }
-
-            .formBackLink {
-            top: 10px;
-            left: 15px;
-        }
-        }
-    </style>
+    <link rel="stylesheet" href="../../assets/css/pages/faq.css">
 </head>
 <body>
-
-
     <div class="container">
         <a href="../../index.html" class="formBackLink">← Back</a>
 
         <h1>Frequently Asked Questions</h1>
         <p class="faq-description">Find answers to common questions about KillerSale POS system for small businesses.</p>
-        
         
         <div class="faq-category">
             <h2>General Questions</h2>
@@ -387,17 +226,6 @@
         </footer>
     </div>
     
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const faqQuestions = document.querySelectorAll('.faq-question');
-            
-            faqQuestions.forEach(question => {
-                question.addEventListener('click', () => {
-                    const faqItem = question.parentElement;
-                    faqItem.classList.toggle('active');
-                });
-            });
-        });
-    </script>
+    <script src="../../assets/js/pages/faq.js"></script>
 </body>
 </html>
