@@ -175,7 +175,7 @@ submitBtn.addEventListener('click', () => {
         modificationsHtml = '+ Modifications';
     }
     
-    // Create new entry element
+    // Creating new entry element
     const entryDiv = document.createElement('div');
     entryDiv.classList.add('entry');
     

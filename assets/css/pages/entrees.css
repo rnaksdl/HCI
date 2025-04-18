@@ -1,66 +1,101 @@
+/* ---------------------- General Layout ---------------------- */
+
+/* Main container settings for body content */
 .mainBody {
-    /* margin-left: 80px; Match sidebar width */
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 95%; /* Full width minus sidebar */
-    font-family: 'Poiret One', cursive;
-  }
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 95%; /* Almost full width to allow space for sidebar if needed */
+  font-family: 'Poiret One', cursive;
+}
 
-  .backArrow {
-    position: absolute;
-    top: 20px;
-    left: 100px;
-    z-index: 1000; /* Keep it above other elements */
-  }
-  
-  .backArrow img {
-    width: 60px;
-    height: auto;
-    cursor: pointer;
-  }
+/* Overall body settings */
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  min-height: 100vh;
+  font-family: 'Poiret One', cursive;
+}
 
-  .backArrow img:hover {
-    background-color: whitesmoke;
-  }
-  
+/* Full height for the HTML element */
+html {
+  height: 100%;
+}
 
+/* CSS variables for easy theming */
+:root {
+  --primary-bg: #000;
+  --primary-text: #fff;
+  --secondary-bg: #333;
+  --accent-color: #007bff;
+}
+
+/* ---------------------- Back Arrow ---------------------- */
+
+/* Container for back arrow positioning */
+.backArrow {
+  position: absolute;
+  top: 20px;
+  left: 100px;
+  z-index: 1000; /* Stay above everything else */
+}
+
+/* Back arrow image styles */
+.backArrow img {
+  width: 60px;
+  height: auto;
+  cursor: pointer;
+}
+
+/* Hover effect for back arrow */
+.backArrow img:hover {
+  background-color: whitesmoke;
+}
+
+/* ---------------------- Entry Display ---------------------- */
+
+/* Title for each entry section */
 .entryName {
-    width: 800px;
-    padding: 20px;
-    margin: 30px;
-    border: 2px solid black;
-    border-radius: 10px;
-    text-align: center;
-    background-color: black;
-    color: white;
-    font-size: 70px;
+  width: 800px;
+  padding: 20px;
+  margin: 30px;
+  border: 2px solid black;
+  border-radius: 10px;
+  text-align: center;
+  background-color: black;
+  color: white;
+  font-size: 70px;
 }
 
+/* Container for individual entries */
 .entry {
-    width: 800px;
-    border: 3px solid black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row; 
-    font-family: sans-serif;
-    margin-bottom: 30px;
-    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
+  width: 800px;
+  border: 3px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  font-family: sans-serif;
+  margin-bottom: 30px;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
+/* Image container for an entry */
 .entryImage {
-    border-right: 3px solid black;
-    padding: 20px;
+  border-right: 3px solid black;
+  padding: 20px;
 }
 
+/* Entry image size */
 .entryImage img {
   height: 80px;
   width: 80px;
 }
 
+/* Container for name and price details */
 .nameAndPrice {
   display: flex;
   flex-direction: column;
@@ -73,6 +108,7 @@
   height: 127px;
 }
 
+/* Entry main name */
 .mainName {
   text-decoration: underline;
   font-weight: bolder;
@@ -80,14 +116,17 @@
   padding: 5px;
 }
 
+/* Entry price */
 .price {
   font-size: 25px;
 }
 
+/* Description and modification area */
 .descAndMods {
   font-size: 17px;
 }
 
+/* Entry description */
 .description {
   border-bottom: 3px solid black;
   padding-left: 3px;
@@ -95,6 +134,7 @@
   height: 77px;
 }
 
+/* Container for modifications */
 .mods {
   display: flex;
   flex-direction: column;
@@ -103,17 +143,20 @@
   height: 48px;
 }
 
+/* Title for mods */
 .modTitle {
   justify-content: center;
   align-items: center;
 }
 
+/* Display actual mods horizontally */
 .actualMods {
   flex-direction: row;
   gap: 10px;
   font-size: 15px;
 }
 
+/* List of mods in vertical layout */
 .modList {
   margin-top: 10px;
   display: flex;
@@ -121,6 +164,7 @@
   gap: 5px;
 }
 
+/* Individual mod item */
 .modItem {
   display: flex;
   align-items: center;
@@ -128,11 +172,13 @@
   padding: 5px;
 }
 
+/* Text inside mod item */
 .modItem span {
   font-size: 16px;
   margin-right: 8px;
 }
 
+/* Edit button for mods */
 .modEditBtn {
   font-size: 13px;
   margin-right: 5px;
@@ -143,11 +189,13 @@
   width: 40px;
 }
 
+/* Hover effect for edit button */
 .modEditBtn:hover {
   background-color: #45a049;
   cursor: pointer;
 }
 
+/* Delete button for mods */
 .modDeleteBtn {
   font-size: 13px;
   margin-right: 5px;
@@ -158,48 +206,55 @@
   width: 45px;
 }
 
+/* Hover effect for delete button */
 .modDeleteBtn:hover {
   background-color: #d32f2f;
   cursor: pointer;
 }
 
+/* ---------------------- Add Entry Button ---------------------- */
+
+/* Add new entry button */
 .addEntry {
-    width: 400px;
-    padding: 20px;
-    margin: 30px;
-    border: 2px solid black;
-    border-radius: 10px;
-    text-align: center;
-    background-color: black;
-    color: white;
-    font-size: 35px;
+  width: 400px;
+  padding: 20px;
+  margin: 30px;
+  border: 2px solid black;
+  border-radius: 10px;
+  text-align: center;
+  background-color: black;
+  color: white;
+  font-size: 35px;
 }
 
+/* Hover effect for add entry button */
 .addEntry:hover {
-    cursor: pointer;
-    background-color: #333333;
+  cursor: pointer;
+  background-color: #333333;
 }
 
+/* ---------------------- Modal Popup ---------------------- */
+
+/* Modal background overlay */
 .modalOverlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Grays out background */
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 2000; /* Higher than everything else */
+  z-index: 2000; /* Topmost layer */
 }
 
-/* Hidden by default */
+/* Hidden class to toggle modal visibility */
 .hidden {
   display: none;
 }
 
-
-/* Modal box styles */
+/* Main modal container */
 .modalBox {
   position: relative;
   background-color: white;
@@ -211,6 +266,7 @@
   text-align: center;
 }
 
+/* Title and back button layout inside modal */
 .titleAndBack {
   display: flex;
   flex-direction: row;
@@ -218,6 +274,7 @@
   justify-content: center;
 }
 
+/* Title inside modal */
 .modalTitle {
   width: 350px;
   padding: 10px;
@@ -230,12 +287,14 @@
   font-size: 40px;
 }
 
+/* Close modal button container */
 .closeModal {
   position: absolute;
   top: 15px;
   right: 20px;
 }
 
+/* Close modal button */
 .closeModalBtn {
   background-color: white;
   border: none;
@@ -243,11 +302,15 @@
   font-size: 35px;
 }
 
+/* Hover effect for close button */
 .closeModalBtn:hover {
   cursor: pointer;
   background-color: whitesmoke;
 }
 
+/* ---------------------- Form Inside Modal ---------------------- */
+
+/* Main form layout inside modal */
 .mainForm {
   display: flex;
   flex-direction: row;
@@ -256,6 +319,7 @@
   font-family: sans-serif;
 }
 
+/* Left section of form */
 .formLeft {
   display: flex;
   flex-direction: column;
@@ -264,6 +328,7 @@
   width: 300px;
 }
 
+/* Input area for item name */
 .itemName {
   display: flex;
   flex-direction: column;
@@ -271,10 +336,12 @@
   padding: 10px;
 }
 
+/* Label for item name */
 .itemName label {
   font-size: 25px;
 }
 
+/* Input field for item name */
 .itemName input {
   width: 225px;
   height: 40px;
@@ -285,6 +352,7 @@
   padding: 5px;
 }
 
+/* Section for adding mods */
 .addMods {
   display: flex;
   flex-direction: column;
@@ -292,10 +360,12 @@
   padding: 10px;
 }
 
+/* Label for mod section */
 .addMods label {
   font-size: 25px;
 }
 
+/* Mod input and button container */
 .modAndBtn input {
   width: 200px;
   height: 30px;
@@ -306,16 +376,19 @@
   padding: 5px;
 }
 
+/* Add mod button */
 .modAndBtn button {
   width: 50px;
   height: 25px;
 }
 
+/* Hover effect for mod button */
 .modAndBtn button:hover {
   background-color: lightgray;
   cursor: pointer;
 }
 
+/* Right section of form */
 .formRight {
   display: flex;
   flex-direction: column;
@@ -324,6 +397,7 @@
   width: 300px;
 }
 
+/* Input for item image */
 .itemImage {
   display: flex;
   flex-direction: column;
@@ -331,10 +405,12 @@
   padding: 10px;
 }
 
+/* Label for item image */
 .itemImage label {
   font-size: 25px;
 }
 
+/* Submit button for form */
 .modalSubmitBtn {
   width: 200px;
   padding: 10px;
@@ -347,11 +423,13 @@
   font-size: 35px;
 }
 
+/* Hover effect for submit button */
 .modalSubmitBtn:hover {
   cursor: pointer;
   background-color: #333333;
 }
 
+/* Input for item price */
 .itemPrice {
   display: flex;
   flex-direction: column;
@@ -359,10 +437,12 @@
   padding: 10px;
 }
 
+/* Label for item price */
 .itemPrice label {
   font-size: 25px;
 }
 
+/* Input field for price */
 .itemPrice input {
   width: 225px;
   height: 40px;
@@ -373,6 +453,7 @@
   padding: 5px;
 }
 
+/* Input for item description */
 .itemDescription {
   display: flex;
   flex-direction: column;
@@ -380,10 +461,12 @@
   padding: 10px;
 }
 
+/* Label for item description */
 .itemDescription label {
   font-size: 25px;
 }
 
+/* Textarea for item description */
 .itemDescription textarea {
   width: 275px;
   height: 100px;
@@ -393,22 +476,3 @@
   font-size: 12px;
   padding: 5px;
 }
-
-:root {
-    --primary-bg: #000;
-    --primary-text: #fff;
-    --secondary-bg: #333;
-    --accent-color: #007bff;
-  }
-  
-  body {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    min-height: 100vh;
-    font-family: 'Poiret One', cursive;
-  }
-  
-  html {
-    height: 100%;
-  }
