@@ -131,9 +131,8 @@ button:hover
 .formBackLink 
 {
     position: absolute;
-    top: -25px;      /* Please don't question the numbers */
+    top: -25px;      /* Please don't question the numbers, it just looks better like that */
     left: -20px;     
-    font-family: 'Poiret One', sans-serif;
     text-decoration: none;
     color: black;
     font-size: 18px;
@@ -203,6 +202,7 @@ input.inputError
     background-color: #fff0f0;
 }
 
+/* Password Requirements styling (Just pushing it in a bit more so that its a sub section of password */
 .passwordRequirements
 {
     margin-bottom: 10px;
