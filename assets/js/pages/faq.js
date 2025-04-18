@@ -1,3 +1,5 @@
+
+// waitr for eveything to load, when a quetion is clicked, toggle answer
 document.addEventListener('DOMContentLoaded', function() {
     const faqQuestions = document.querySelectorAll('.faq-question');
     
